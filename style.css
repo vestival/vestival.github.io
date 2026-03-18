@@ -107,6 +107,28 @@ header ul a {
 }
 header ul a:hover { color: var(--text); }
 
+.font-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  transition: color var(--transition), border-color var(--transition);
+  letter-spacing: 0;
+}
+.font-toggle:hover { color: var(--text); border-color: var(--text-muted); }
+
+[data-font-size="large"] body { font-size: 18px; }
+[data-font-size="large"] p, [data-font-size="large"] li { font-size: 1rem; }
+
 .theme-toggle {
   background: none;
   border: 1px solid var(--border);

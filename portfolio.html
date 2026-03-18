@@ -24,6 +24,7 @@
         <li><a href="/#contact">Contact</a></li>
         <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
       </ul>
+      <button class="font-toggle" id="fontToggle" aria-label="Toggle font size">A</button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <span class="icon-sun">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -56,14 +57,14 @@
 
       <div class="conf-grid">
         <div class="conf-card">
-          <h3>ETH CC 2024</h3>
-          <p class="conf-card-meta">Brussels, Belgium &middot; July 2024</p>
-          <p>Polygon's aggregation vision: how monolithic and modular chains converge and what it means for developers building cross-chain applications.</p>
-        </div>
-        <div class="conf-card">
           <h3>ETH Denver 2025</h3>
           <p class="conf-card-meta">Denver, CO &middot; March 2025</p>
           <p>Developer ecosystems and product marketing in the decentralized world. How to build communities that actually want to build with you.</p>
+        </div>
+        <div class="conf-card">
+          <h3>ETH CC 2024</h3>
+          <p class="conf-card-meta">Brussels, Belgium &middot; July 2024</p>
+          <p>Polygon's aggregation vision: how monolithic and modular chains converge and what it means for developers building cross-chain applications.</p>
         </div>
         <div class="conf-card">
           <h3>Red Hat Summit</h3>
@@ -247,6 +248,29 @@
           </ul>
         </div>
 
+        <!-- Polkadot -->
+        <div class="writing-group">
+          <div class="writing-group-head">
+            <img src="logos/polkadot.png" alt="" class="writing-logo-sm" onerror="this.style.display='none'">
+            <h3>Parity / Polkadot</h3>
+            <span class="pill web3">Web3</span>
+          </div>
+          <ul class="article-list">
+            <li class="article-item">
+              <a href="https://www.polkadot.network/blog/polkadot-1-0-pioneering-blockspace-composability-and-scalability" target="_blank" rel="noopener">
+                Polkadot 1.0: Pioneering Blockspace Composability and Scalability
+                <span class="article-arrow">↗</span>
+              </a>
+            </li>
+            <li class="article-item">
+              <a href="https://www.polkadot.network/blog/how-polkadots-blockspace-empowers-developers" target="_blank" rel="noopener">
+                How Polkadot's Blockspace Empowers Developers
+                <span class="article-arrow">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <!-- Chainlink -->
         <div class="writing-group">
           <div class="writing-group-head">
@@ -297,29 +321,6 @@
             <li class="article-item">
               <a href="https://chain.link/case-studies/swingby" target="_blank" rel="noopener">
                 Swingby
-                <span class="article-arrow">↗</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Polkadot -->
-        <div class="writing-group">
-          <div class="writing-group-head">
-            <img src="logos/polkadot.png" alt="" class="writing-logo-sm" onerror="this.style.display='none'">
-            <h3>Parity / Polkadot</h3>
-            <span class="pill web3">Web3</span>
-          </div>
-          <ul class="article-list">
-            <li class="article-item">
-              <a href="https://www.polkadot.network/blog/polkadot-1-0-pioneering-blockspace-composability-and-scalability" target="_blank" rel="noopener">
-                Polkadot 1.0: Pioneering Blockspace Composability and Scalability
-                <span class="article-arrow">↗</span>
-              </a>
-            </li>
-            <li class="article-item">
-              <a href="https://www.polkadot.network/blog/how-polkadots-blockspace-empowers-developers" target="_blank" rel="noopener">
-                How Polkadot's Blockspace Empowers Developers
                 <span class="article-arrow">↗</span>
               </a>
             </li>
@@ -448,15 +449,28 @@
   </footer>
 
   <script>
-    const toggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-    const saved = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', saved);
+
+    // Theme
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
     toggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
+    });
+
+    // Font size
+    const fontToggle = document.getElementById('fontToggle');
+    const savedFont = localStorage.getItem('font-size') || 'normal';
+    html.setAttribute('data-font-size', savedFont);
+    fontToggle.textContent = savedFont === 'large' ? 'A−' : 'A+';
+    fontToggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-font-size') === 'large' ? 'normal' : 'large';
+      html.setAttribute('data-font-size', next);
+      localStorage.setItem('font-size', next);
+      fontToggle.textContent = next === 'large' ? 'A−' : 'A+';
     });
   </script>
 

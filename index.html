@@ -473,8 +473,8 @@
       localStorage.setItem('theme', next);
     });
 
-    // Font size – 4 levels: 1, 1.15, 1.3, 1.5
-    const ZOOM_LEVELS = [1, 1.15, 1.3, 1.5];
+    // Font size – 100% to 300% in 25% steps
+    const ZOOM_LEVELS = [1, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0];
     let zoomIndex = parseInt(localStorage.getItem('font-level') || '0', 10);
     const fontDown = document.getElementById('fontDown');
     const fontUp   = document.getElementById('fontUp');

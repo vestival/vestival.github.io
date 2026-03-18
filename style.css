@@ -126,8 +126,7 @@ header ul a:hover { color: var(--text); }
 }
 .font-toggle:hover { color: var(--text); border-color: var(--text-muted); }
 
-/* WCAG 1.4.4 – text resize 125% */
-[data-font-size="large"] body { zoom: 1.25; }
+.font-toggle:disabled { opacity: 0.3; cursor: not-allowed; }
 
 .theme-toggle {
   background: none;

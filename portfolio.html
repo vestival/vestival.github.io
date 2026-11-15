@@ -3,504 +3,852 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work: Victor Estival</title>
+  <title>Work - Victor Estival</title>
   <meta name="description" content="Writing, talks and projects by Victor Estival on AI agents on real work, Kubernetes at fleet scale and product marketing with AI." />
   <link rel="canonical" href="https://vestival.es/portfolio" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Victor Estival" />
   <meta property="og:url" content="https://vestival.es/portfolio" />
-  <meta property="og:title" content="Work: Victor Estival" />
+  <meta property="og:title" content="Work - Victor Estival" />
   <meta property="og:description" content="Writing, talks and projects on AI agents on real work, Kubernetes at fleet scale and product marketing with AI." />
   <meta property="og:image" content="https://vestival.es/og.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@victorestival" />
   <meta name="twitter:creator" content="@victorestival" />
-  <meta name="twitter:title" content="Work: Victor Estival" />
+  <meta name="twitter:title" content="Work - Victor Estival" />
   <meta name="twitter:description" content="Writing, talks and projects on AI agents on real work, Kubernetes at fleet scale and product marketing with AI." />
   <meta name="twitter:image" content="https://vestival.es/og.jpg" />
   <link rel="alternate" type="application/rss+xml" title="Victor Estival, writing" href="https://vestival.es/feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
   <script defer src="https://umami.vestival.es/script.js" data-website-id="8cd49a4f-4316-427f-9799-4610c2093880"></script>
 </head>
 <body>
 
+  <!-- NAV -->
   <header>
-    <nav class="container" aria-label="Main">
-      <a href="/" class="nav-logo" aria-label="Home">ve</a>
+    <nav class="container">
+      <a href="/" class="nav-logo">ve</a>
       <ul>
-        <li><a href="/portfolio" aria-current="page">Work</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
         <li><a href="/writing/">Writing</a></li>
       </ul>
-      <div class="nav-tools">
-        <button id="fontDown" aria-label="Decrease font size">A−</button>
-        <button id="fontUp" aria-label="Increase font size">A+</button>
-        <button id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </div>
+      <button class="font-toggle" id="fontDown" aria-label="Decrease font size">A−</button>
+      <button class="font-toggle" id="fontUp" aria-label="Increase font size">A+</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-sun">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="icon-moon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
     </nav>
   </header>
 
-  <main class="container">
+  <!-- PAGE INTRO -->
+  <div class="page-intro">
+    <div class="container">
+      <a href="/" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Home
+      </a>
+      <p class="section-label">Portfolio</p>
+      <h1 class="section-heading" style="margin-bottom: 16px;">My work</h1>
+      <p class="page-intro-text">Writing, talks and projects, grouped by what they show, newest first. My Web3 years are at the end, under Earlier work.</p>
+      <div class="meetup-cloud" style="margin-top: 24px;">
+        <a href="#agents" class="meetup-tag">AI agents</a>
+        <a href="#kubernetes" class="meetup-tag">Kubernetes</a>
+        <a href="#pmm" class="meetup-tag">Product marketing with AI</a>
+        <a href="#series" class="meetup-tag">Series</a>
+        <a href="#talks" class="meetup-tag">Talks and workshops</a>
+        <a href="#projects" class="meetup-tag">Projects</a>
+        <a href="#earlier" class="meetup-tag">Earlier work</a>
+      </div>
+    </div>
+  </div>
 
-    <section class="intro">
-      <h1>Work</h1>
-      <p>Writing, talks and projects, grouped by what they show. Newest first in each group. My Web3 years are at the end, under Earlier work.</p>
-      <ul class="links" style="margin-top:16px">
-        <li><a href="#agents">AI agents</a></li>
-        <li><a href="#kubernetes">Kubernetes</a></li>
-        <li><a href="#pmm">Product marketing</a></li>
-        <li><a href="#series">Series</a></li>
-        <li><a href="#talks">Talks</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#earlier">Earlier work</a></li>
-      </ul>
-    </section>
+  <!-- AI AGENTS -->
+  <section id="agents">
+    <div class="container">
+      <p class="section-label">Running agents on real work</p>
+      <h2 class="section-heading">AI agents on real work</h2>
 
-    <section id="agents" aria-labelledby="agents-h">
-      <h2 id="agents-h">AI agents on real work</h2>
-      <ul class="items">
-        <li>
-          <a class="item-title" href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45">After 15 years of VS Code, I gave my backlog to parallel agents in Orca</a>
-          <p class="item-meta"><time datetime="2026-11-12">12 Nov 2026</time> · dev.to</p>
-          <p class="item-line">Orca gives every task its own git worktree and its own agent. I ran the backlog of my personal finance app through it. This is what broke in the first week and the rules I added.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk">I ran two skill scanners on my own agent skills. One said do not install.</a>
-          <p class="item-meta"><time datetime="2026-11-11">11 Nov 2026</time> · dev.to</p>
-          <p class="item-line">Two open-source scanners over the skills my agents load every day, what each one flagged and the one fix I kept.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.linkedin.com/posts/vestival_i-gave-an-ai-agent-its-own-wallet-at-a-hackathon-share-7524889472908521472-RIm_">I gave an AI agent its own wallet at a hackathon</a>
-          <p class="item-meta"><time datetime="2026-11-07">7 Nov 2026</time> · LinkedIn</p>
-          <p class="item-line">The agent wallet work behind Stellar Split, our HackMeridian project in Lisbon.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.moltbook.com/u/alfredotter">Alfred, an agent with its own Moltbook account</a>
-          <p class="item-meta"><time datetime="2026-04">Apr</time> to <time datetime="2026-10">Oct 2026</time> · Moltbook</p>
-          <p class="item-line">An OpenClaw agent I set up to post on Moltbook, the social network for AI agents. It wrote 458 posts and 1,322 comments in five months.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://dev.to/asha_alcazar/im-an-ai-devrel-agent-heres-how-i-was-built-40lp">I'm an AI DevRel agent. Here's how I was built</a>
-          <p class="item-meta"><time datetime="2026-03-14">14 Mar 2026</time> · dev.to</p>
-          <p class="item-line">Asha Alcazar, a developer relations agent I built with Claude Code, explains in its own post how it works.</p>
-        </li>
-      </ul>
-    </section>
+      <div class="project-grid">
+        <div class="project-card">
+          <div>
+            <h3>After 15 years of VS Code, I gave my backlog to parallel agents in Orca</h3>
+            <p class="project-meta">12 Nov 2026 &middot; dev.to</p>
+          </div>
+          <p>Orca gives every task its own git worktree and its own agent. I ran the backlog of my personal finance app through it. This is what broke in the first week and the rules I added.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45" target="_blank" rel="noopener" class="project-link">
+            Read on dev.to
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
 
-    <section id="kubernetes" aria-labelledby="kubernetes-h">
-      <h2 id="kubernetes-h">Kubernetes at fleet scale</h2>
-      <ul class="items">
-        <li>
-          <a class="item-title" href="https://dzone.com/articles/measured-outcomes-manually-scaling-fleet-prod">Three measured outcomes of manually scaling Fleet in prod</a>
-          <p class="item-meta"><time datetime="2026-11-09">9 Nov 2026</time> · DZone</p>
-          <p class="item-line">Someone runs kubectl scale on a cluster that Fleet manages. I ran the three ways it can go in my lab and measured each one.</p>
-          <p class="item-also">Also on <a href="https://dev.to/vestival/scaling-prod-by-hand-during-an-incident-when-fleet-manages-it-three-ways-it-goes-measured-3chb">dev.to</a> and <a href="https://builder.aws.com/content/3KgVDnGVFc9jAk2nJeUeIPwTogT/scaling-prod-by-hand-during-an-incident-when-fleet-manages-it-three-ways-it-goes-measured">AWS Builder Center</a></p>
-        </li>
-        <li>
-          <a class="item-title" href="https://dev.to/vestival/disabling-a-user-in-rancher-leaves-every-binding-in-place-remove-the-membership-if-you-mean-12c4">Disabling a user in Rancher leaves every binding in place. Remove the membership if you mean it</a>
-          <p class="item-meta"><time datetime="2026-11-12">12 Nov 2026</time> · dev.to</p>
-          <p class="item-line">An offboarding test on two EKS clusters. Disabling the user blocks the login at Rancher, and every role binding on the clusters stays where it was.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://dev.to/vestival/back-up-rancher-before-you-upgrade-three-ways-the-backup-step-failed-in-my-2152-lab-5hih">Back up Rancher before you upgrade: three ways the backup step failed in my 2.15.2 lab</a>
-          <p class="item-meta"><time datetime="2026-11-05">5 Nov 2026</time> · dev.to</p>
-          <p class="item-line">Every upgrade guide starts with "take a backup first". I ran that step in a lab and it failed three different ways.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://devm.io/devops/gitops-scale-kubernetes">GitOps at Scale: patterns that survive 50 clusters</a>
-          <p class="item-meta"><time datetime="2026-10">Oct 2026</time> · devm.io · part 1 of 5</p>
-          <p class="item-line">Repository layout, rendering depth, promotion and drift policy decide whether a growing fleet stays operable. All four are cheapest to settle while you still have two clusters.</p>
-        </li>
-      </ul>
+        <div class="project-card">
+          <div>
+            <h3>I ran two skill scanners on my own agent skills. One said do not install.</h3>
+            <p class="project-meta">11 Nov 2026 &middot; dev.to</p>
+          </div>
+          <p>Two open-source scanners over the skills my agents load every day, what each one flagged and the one fix I kept.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk" target="_blank" rel="noopener" class="project-link">
+            Read on dev.to
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
 
-      <h3>Running Amazon EKS clusters with Rancher</h3>
-      <ul class="items compact">
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/what-suse-rancher-for-aws-builds-in-your-aws-account-and-what-it-removes/">What SUSE Rancher for AWS builds in your AWS account, and what it removes</a>
-          <p class="item-meta"><time datetime="2026-10-29">29 Oct 2026</time> · suse.com</p>
-          <p class="item-line">Before and after inventories of real creates and deletes in a lab account, written for the person who has to approve the IAM role.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/the-first-thing-you-see-when-an-eks-cluster-lands/">The first thing you see when an EKS cluster lands</a>
-          <p class="item-meta"><time datetime="2026-10-23">23 Oct 2026</time> · suse.com</p>
-          <p class="item-line">A new cluster with nothing on it showed the pods bar at 45 percent. How to read the first screen before you deploy anything.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/why-importing-stops-and-creating-does-not/">Why importing stops and creating does not</a>
-          <p class="item-meta"><time datetime="2026-10-15">15 Oct 2026</time> · suse.com</p>
-          <p class="item-line">An imported EKS cluster stops on "Unauthorized" while a created one goes Active. Why, and the one command that tells you which of the two fixes you need.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/creating-your-first-eks-cluster-and-what-it-costs/">Creating your first EKS cluster, and what it costs</a>
-          <p class="item-meta"><time datetime="2026-10-09">9 Oct 2026</time> · suse.com</p>
-          <p class="item-line">The create path end to end, with the monthly cost on screen next to the Finish button.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/your-first-10-minutes-on-suse-rancher-for-aws/">Your first 10 minutes on SUSE Rancher for AWS</a>
-          <p class="item-meta"><time datetime="2026-10-05">5 Oct 2026</time> · suse.com</p>
-          <p class="item-line">The IAM role step that decides whether setup takes ten minutes or three days.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/managing-multiple-eks-clusters-why-cluster-3-is-the-wall/">Managing multiple EKS clusters: why cluster #3 is the wall</a>
-          <p class="item-meta"><time datetime="2026-09-25">25 Sep 2026</time> · suse.com</p>
-          <p class="item-line">Count the people who need access, multiply by your clusters, then add one cluster. The jump is why the third one feels different.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.suse.com/blog/do-you-really-need-more-than-eks-an-honest-answer/">Do you really need more than EKS? An honest answer</a>
-          <p class="item-meta"><time datetime="2026-08-26">26 Aug 2026</time> · suse.com</p>
-          <p class="item-line">EKS runs clusters. Managing a fleet of them is a separate layer, and whether you need it depends on how many people and environments touch your clusters.</p>
-        </li>
-      </ul>
-    </section>
+        <div class="project-card">
+          <div>
+            <h3>I gave an AI agent its own wallet at a hackathon</h3>
+            <p class="project-meta">7 Nov 2026 &middot; LinkedIn</p>
+          </div>
+          <p>The agent wallet work behind Stellar Split, our HackMeridian project in Lisbon.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://www.linkedin.com/posts/vestival_i-gave-an-ai-agent-its-own-wallet-at-a-hackathon-share-7524889472908521472-RIm_" target="_blank" rel="noopener" class="project-link">
+            Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
 
-    <section id="pmm" aria-labelledby="pmm-h">
-      <h2 id="pmm-h">Product marketing with AI</h2>
-      <ul class="items">
-        <li>
-          <a class="item-title" href="https://www.linkedin.com/posts/vestival_i-keep-a-list-of-20-words-i-wont-publish-share-7518634978814046208-b30N">I keep a list of 20 words I won't publish</a>
-          <p class="item-meta"><time datetime="2026-10-21">21 Oct 2026</time> · LinkedIn</p>
-          <p class="item-line">The words I cut from every draft, mine and my agents', before anything goes out.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.linkedin.com/posts/vestival_my-content-agent-wrote-ten-post-ideas-last-share-7490736449214922752-KipH">My content agent wrote ten post ideas</a>
-          <p class="item-meta"><time datetime="2026-08-05">5 Aug 2026</time> · LinkedIn</p>
-          <p class="item-line">A note from working with a content agent on my own posts.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.linkedin.com/posts/vestival_someone-asked-me-the-other-day-what-product-share-7445267511668797441-rBmW">Someone asked me what product marketing is</a>
-          <p class="item-meta"><time datetime="2026-04-06">6 Apr 2026</time> · LinkedIn</p>
-          <p class="item-line">My short answer, after eleven years doing it.</p>
-        </li>
-      </ul>
-    </section>
+        <div class="project-card">
+          <div>
+            <h3>Alfred on Moltbook</h3>
+            <p class="project-meta">Apr to Oct 2026 &middot; Moltbook</p>
+          </div>
+          <p>An OpenClaw agent I set up to post on Moltbook, the social network for AI agents. It wrote 458 posts and 1,322 comments in five months.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://www.moltbook.com/u/alfredotter" target="_blank" rel="noopener" class="project-link">
+            u/alfredotter
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
 
-    <section id="series" aria-labelledby="series-h">
-      <h2 id="series-h">Series</h2>
-      <ul class="items">
-        <li>
-          <a class="item-title" href="https://devm.io/devops/gitops-scale-kubernetes">GitOps at Scale</a>
-          <p class="item-meta">devm.io · commissioned, 5 parts</p>
-          <p class="item-line">Running GitOps across a growing Kubernetes fleet, one pattern per part.</p>
-          <ol class="series">
-            <li><a href="https://devm.io/devops/gitops-scale-kubernetes">Patterns that survive 50 clusters</a> <span class="muted">· Oct 2026</span></li>
+        <div class="project-card">
+          <div>
+            <h3>Asha Alcazar</h3>
+            <p class="project-meta">14 Mar 2026 &middot; dev.to</p>
+          </div>
+          <p>A developer relations agent I built with Claude Code. In "I'm an AI DevRel agent. Here's how I was built", it explains in its own post how it works.</p>
+          <span class="pill web3">AI</span>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="https://dev.to/asha_alcazar/im-an-ai-devrel-agent-heres-how-i-was-built-40lp" target="_blank" rel="noopener" class="project-link">
+              Read the story
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://x.com/ashaalcazar" target="_blank" rel="noopener" class="project-link">
+              @ashaalcazar
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KUBERNETES -->
+  <section id="kubernetes" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <p class="section-label">Field notes from my lab</p>
+      <h2 class="section-heading">Kubernetes at fleet scale</h2>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div>
+            <h3>Three measured outcomes of manually scaling Fleet in prod</h3>
+            <p class="project-meta">9 Nov 2026 &middot; DZone</p>
+          </div>
+          <p>Someone runs kubectl scale on a cluster that Fleet manages. I ran the three ways it can go in my lab and measured each one.</p>
+          <span class="pill web2">Kubernetes</span>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="https://dzone.com/articles/measured-outcomes-manually-scaling-fleet-prod" target="_blank" rel="noopener" class="project-link">
+              Read on DZone
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://dev.to/vestival/scaling-prod-by-hand-during-an-incident-when-fleet-manages-it-three-ways-it-goes-measured-3chb" target="_blank" rel="noopener" class="project-link">
+              Also on dev.to
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://builder.aws.com/content/3KgVDnGVFc9jAk2nJeUeIPwTogT/scaling-prod-by-hand-during-an-incident-when-fleet-manages-it-three-ways-it-goes-measured" target="_blank" rel="noopener" class="project-link">
+              Also on AWS Builder Center
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Disabling a user in Rancher leaves every binding in place</h3>
+            <p class="project-meta">12 Nov 2026 &middot; dev.to</p>
+          </div>
+          <p>An offboarding test on two EKS clusters. Disabling the user blocks the login at Rancher, and every role binding on the clusters stays where it was. Remove the membership if you mean it.</p>
+          <span class="pill web2">Kubernetes</span>
+          <a href="https://dev.to/vestival/disabling-a-user-in-rancher-leaves-every-binding-in-place-remove-the-membership-if-you-mean-12c4" target="_blank" rel="noopener" class="project-link">
+            Read on dev.to
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Back up Rancher before you upgrade</h3>
+            <p class="project-meta">5 Nov 2026 &middot; dev.to</p>
+          </div>
+          <p>Every upgrade guide starts with "take a backup first". I ran that step in a 2.15.2 lab and it failed three different ways.</p>
+          <span class="pill web2">Kubernetes</span>
+          <a href="https://dev.to/vestival/back-up-rancher-before-you-upgrade-three-ways-the-backup-step-failed-in-my-2152-lab-5hih" target="_blank" rel="noopener" class="project-link">
+            Read on dev.to
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>GitOps at Scale: patterns that survive 50 clusters</h3>
+            <p class="project-meta">Oct 2026 &middot; devm.io &middot; part 1 of 5</p>
+          </div>
+          <p>Repository layout, rendering depth, promotion and drift policy decide whether a growing fleet stays operable. All four are cheapest to settle while you still have two clusters.</p>
+          <span class="pill web2">Kubernetes</span>
+          <a href="https://devm.io/devops/gitops-scale-kubernetes" target="_blank" rel="noopener" class="project-link">
+            Read on devm.io
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="writing-subsection-label" style="margin-top: 48px;">Running Amazon EKS clusters with Rancher, on suse.com</p>
+      <div class="other-grid">
+        <a href="https://www.suse.com/blog/what-suse-rancher-for-aws-builds-in-your-aws-account-and-what-it-removes/" target="_blank" rel="noopener" class="other-card">
+          <h4>What SUSE Rancher for AWS builds in your AWS account, and what it removes</h4>
+          <p>29 Oct 2026. Before and after inventories of real creates and deletes in a lab account, for the person who approves the IAM role.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/the-first-thing-you-see-when-an-eks-cluster-lands/" target="_blank" rel="noopener" class="other-card">
+          <h4>The first thing you see when an EKS cluster lands</h4>
+          <p>23 Oct 2026. A new cluster with nothing on it showed the pods bar at 45 percent. How to read the first screen.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/why-importing-stops-and-creating-does-not/" target="_blank" rel="noopener" class="other-card">
+          <h4>Why importing stops and creating does not</h4>
+          <p>15 Oct 2026. An imported EKS cluster stops on "Unauthorized" while a created one goes Active, and the command that tells you which fix you need.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/creating-your-first-eks-cluster-and-what-it-costs/" target="_blank" rel="noopener" class="other-card">
+          <h4>Creating your first EKS cluster, and what it costs</h4>
+          <p>9 Oct 2026. The create path end to end, with the monthly cost on screen next to the Finish button.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/your-first-10-minutes-on-suse-rancher-for-aws/" target="_blank" rel="noopener" class="other-card">
+          <h4>Your first 10 minutes on SUSE Rancher for AWS</h4>
+          <p>5 Oct 2026. The IAM role step that decides whether setup takes ten minutes or three days.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/managing-multiple-eks-clusters-why-cluster-3-is-the-wall/" target="_blank" rel="noopener" class="other-card">
+          <h4>Managing multiple EKS clusters: why cluster #3 is the wall</h4>
+          <p>25 Sep 2026. Count the people who need access, multiply by your clusters, then add one cluster.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/do-you-really-need-more-than-eks-an-honest-answer/" target="_blank" rel="noopener" class="other-card">
+          <h4>Do you really need more than EKS? An honest answer</h4>
+          <p>26 Aug 2026. EKS runs clusters. Managing a fleet of them is a separate layer, and whether you need it depends on how many people touch them.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PMM WITH AI -->
+  <section id="pmm">
+    <div class="container">
+      <p class="section-label">How I work</p>
+      <h2 class="section-heading">Product marketing with AI</h2>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div>
+            <h3>I keep a list of 20 words I won't publish</h3>
+            <p class="project-meta">21 Oct 2026 &middot; LinkedIn</p>
+          </div>
+          <p>The words I cut from every draft, mine and my agents', before anything goes out.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://www.linkedin.com/posts/vestival_i-keep-a-list-of-20-words-i-wont-publish-share-7518634978814046208-b30N" target="_blank" rel="noopener" class="project-link">
+            Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>My content agent wrote ten post ideas</h3>
+            <p class="project-meta">5 Aug 2026 &middot; LinkedIn</p>
+          </div>
+          <p>A note from working with a content agent on my own posts.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://www.linkedin.com/posts/vestival_my-content-agent-wrote-ten-post-ideas-last-share-7490736449214922752-KipH" target="_blank" rel="noopener" class="project-link">
+            Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Someone asked me what product marketing is</h3>
+            <p class="project-meta">6 Apr 2026 &middot; LinkedIn</p>
+          </div>
+          <p>My short answer, after eleven years doing it.</p>
+          <span class="pill web2">PMM</span>
+          <a href="https://www.linkedin.com/posts/vestival_someone-asked-me-the-other-day-what-product-share-7445267511668797441-rBmW" target="_blank" rel="noopener" class="project-link">
+            Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERIES -->
+  <section id="series" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <p class="section-label">Read in order</p>
+      <h2 class="section-heading">Series</h2>
+
+      <div class="writing-groups">
+        <div class="writing-group">
+          <div class="writing-group-head">
+            <h3>GitOps at Scale</h3>
+            <span class="pill web2">devm.io &middot; 5 parts</span>
+          </div>
+          <ul class="article-list">
+            <li class="article-item">
+              <a href="https://devm.io/devops/gitops-scale-kubernetes" target="_blank" rel="noopener">
+                Part 1. Patterns that survive 50 clusters (Oct 2026)
+                <span class="article-arrow">↗</span>
+              </a>
+            </li>
             <!-- Part 2, Multi-cluster Kubernetes: surviving cluster sprawl. Add when live on devm.io. -->
-          </ol>
-        </li>
-        <li>
-          <a class="item-title" href="https://dev.to/vestival/series/46716">Running agents on real work</a>
-          <p class="item-meta">dev.to</p>
-          <p class="item-line">Agents on my own backlog, with what broke and the numbers.</p>
-          <ol class="series">
-            <li><a href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45">After 15 years of VS Code, I gave my backlog to parallel agents in Orca</a> <span class="muted">· 12 Nov 2026</span></li>
-            <!-- Orca "Day N" posts: add here once at least three days are live. One <li> per day: title, date, LinkedIn URL. -->
-          </ol>
-        </li>
-        <li>
-          <a class="item-title" href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk">Agent skill security</a>
-          <p class="item-meta">dev.to</p>
-          <p class="item-line">What is inside the skills people hand to their agents, checked with scanners.</p>
-          <ol class="series">
-            <li><a href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk">I ran two skill scanners on my own agent skills</a> <span class="muted">· 11 Nov 2026</span></li>
-            <!-- Add the DZone copy as "also on" once it leaves moderation, and the LinkedIn parts once live. -->
-          </ol>
-        </li>
-      </ul>
-    </section>
+          </ul>
+        </div>
 
-    <section id="talks" aria-labelledby="talks-h">
-      <h2 id="talks-h">Talks and workshops</h2>
-      <ul class="items">
-        <li>
-          <a class="item-title" href="https://stellar-split-site.vercel.app">HackMeridian, Lisbon: Stellar Split</a>
-          <p class="item-meta"><time datetime="2026-10-25">25</time> and <time datetime="2026-10-26">26 Oct 2026</time> · hackathon</p>
-          <p class="item-line">Two days, a team of five, an app that splits shared expenses and settles them in USDC on Stellar. I worked on product, go-to-market and security.</p>
-          <p class="item-also">Also see <a href="https://stellar-split-sooty.vercel.app">the app</a>, <a href="https://stellar-split-docs.vercel.app">the docs</a> and <a href="https://github.com/vestival/Stellar-Split">the repo</a></p>
-        </li>
-        <li>
-          <a class="item-title" href="https://github.com/vestival/stellar-workshop-spain">Deploy on Stellar workshops, Barcelona and Madrid</a>
-          <p class="item-meta"><time datetime="2026-09-18">18</time> and <time datetime="2026-09-19">19 Sep 2026</time> · workshops with CryptoDays</p>
-          <p class="item-line">Hands-on sessions ahead of HackMeridian, built around Claude Code and Stellar agent skills. The repo holds the material.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://steampunk.si/rh-connect-2023/">RH Connect 2023</a>
-          <p class="item-meta"><time datetime="2023">2023</time> · Slovenia</p>
-          <p class="item-line">Red Hat partner and community event on automation and hybrid cloud.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.youtube.com/watch?v=pwT-kwIJOmU">My non-traditional journey to tech</a>
-          <p class="item-meta"><time datetime="2021-12-13">13 Dec 2021</time> · video</p>
-          <p class="item-line">How I got into tech without the usual path, told for the SUSE channel.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://openexpoeurope.com/es/oe2018/ponentes/">OpenExpo Europe 2018</a>
-          <p class="item-meta"><time datetime="2018">2018</time> · Madrid</p>
-          <p class="item-line">Open source in the enterprise, at OpenExpo in Madrid.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://www.youtube.com/watch?v=QGnRznJ3Xz8">Sizing your OpenStack cloud</a>
-          <p class="item-meta"><time datetime="2015-10">Oct 2015</time> · OpenStack Summit</p>
-          <p class="item-line">How to size an OpenStack cloud before you buy the hardware.</p>
-        </li>
-      </ul>
-    </section>
+        <div class="writing-group">
+          <div class="writing-group-head">
+            <h3>Running agents on real work</h3>
+            <span class="pill web3">dev.to</span>
+          </div>
+          <ul class="article-list">
+            <li class="article-item">
+              <a href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45" target="_blank" rel="noopener">
+                After 15 years of VS Code, I gave my backlog to parallel agents in Orca (12 Nov 2026)
+                <span class="article-arrow">↗</span>
+              </a>
+            </li>
+            <li class="article-item">
+              <a href="https://dev.to/vestival/series/46716" target="_blank" rel="noopener">
+                The whole series on dev.to
+                <span class="article-arrow">↗</span>
+              </a>
+            </li>
+            <!-- Orca "Day N" posts on LinkedIn: add one <li> per day here once at least three are live. -->
+          </ul>
+        </div>
 
-    <section id="projects" aria-labelledby="projects-h">
-      <h2 id="projects-h">Projects</h2>
-      <ul class="items">
-        <li>
-          <a class="item-title" href="https://github.com/vestival/sra-fleet-lab">sra-fleet-lab</a>
-          <p class="item-meta"><time datetime="2026-09">Sep 2026</time> · GitHub</p>
-          <p class="item-line">My lab for multi-cluster GitOps with Fleet on three EKS clusters. The Fleet and Rancher field notes on this page came out of it.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://github.com/davidbuenov/dbv-md-reader/pulls?q=is%3Apr+author%3Avestival">DBV Markdown Reader for macOS</a>
-          <p class="item-meta"><time datetime="2026-08">Aug</time> to <time datetime="2026-09">Sep 2026</time> · GitHub</p>
-          <p class="item-line">I added the native macOS menu, Cmd shortcuts and printing to an open source Rust and Tauri Markdown reader. Three of my pull requests are merged upstream.</p>
-          <p class="item-also">Also see <a href="https://github.com/vestival/dbv-md-reader">my fork</a> and <a href="https://github.com/vestival/homebrew-dbv-md-reader">the Homebrew tap</a></p>
-        </li>
-        <li>
-          <a class="item-title" href="https://github.com/vestival/stellar-workshop-spain">stellar-workshop-spain</a>
-          <p class="item-meta"><time datetime="2026-09">Sep 2026</time> · GitHub</p>
-          <p class="item-line">Material for the Barcelona and Madrid Stellar workshops, used in both sessions.</p>
-        </li>
-        <li>
-          <a class="item-title" href="https://github.com/vestival/Stellar-Split">Stellar-Split</a>
-          <p class="item-meta"><time datetime="2026-10">Oct 2026</time> · GitHub</p>
-          <p class="item-line">The HackMeridian project. Split shared expenses and settle in USDC on Stellar, live as an app with its own docs.</p>
-        </li>
-      </ul>
-    </section>
+        <div class="writing-group">
+          <div class="writing-group-head">
+            <h3>Agent skill security</h3>
+            <span class="pill web3">dev.to</span>
+          </div>
+          <ul class="article-list">
+            <li class="article-item">
+              <a href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk" target="_blank" rel="noopener">
+                I ran two skill scanners on my own agent skills (11 Nov 2026)
+                <span class="article-arrow">↗</span>
+              </a>
+            </li>
+            <!-- Add the DZone copy once it leaves moderation, and the LinkedIn parts once live. -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="earlier" aria-labelledby="earlier-h">
-      <h2 id="earlier-h">Earlier work</h2>
-      <p class="muted" style="margin-bottom:16px">Product marketing for Web3 protocols, and my years in infrastructure before that. Links to pages that no longer exist go to a web.archive.org copy.</p>
+  <!-- TALKS -->
+  <section id="talks">
+    <div class="container">
+      <p class="section-label">On stage</p>
+      <h2 class="section-heading">Talks and workshops</h2>
+
+      <div class="conf-grid">
+        <div class="conf-card">
+          <h3>HackMeridian: Stellar Split</h3>
+          <p class="conf-card-meta">Lisbon, Portugal &middot; 25 and 26 Oct 2026</p>
+          <p>Two days, a team of five, an app that splits shared expenses and settles them in USDC on Stellar. I worked on product, go-to-market and security.</p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="https://stellar-split-site.vercel.app" target="_blank" rel="noopener" class="conf-card-watch">Site ↗</a>
+            <a href="https://stellar-split-sooty.vercel.app" target="_blank" rel="noopener" class="conf-card-watch">App ↗</a>
+            <a href="https://stellar-split-docs.vercel.app" target="_blank" rel="noopener" class="conf-card-watch">Docs ↗</a>
+            <a href="https://github.com/vestival/Stellar-Split" target="_blank" rel="noopener" class="conf-card-watch">Repo ↗</a>
+          </div>
+        </div>
+        <a href="https://github.com/vestival/stellar-workshop-spain" target="_blank" rel="noopener" class="conf-card conf-card-link">
+          <h3>Deploy on Stellar workshops</h3>
+          <p class="conf-card-meta">Barcelona and Madrid &middot; 18 and 19 Sep 2026</p>
+          <p>Hands-on sessions with CryptoDays ahead of HackMeridian, built around Claude Code and Stellar agent skills.</p>
+          <span class="conf-card-watch">Workshop material ↗</span>
+        </a>
+        <a href="https://steampunk.si/rh-connect-2023/" target="_blank" rel="noopener" class="conf-card conf-card-link">
+          <h3>RH Connect 2023</h3>
+          <p class="conf-card-meta">Slovenia &middot; 2023</p>
+          <p>Red Hat partner and community event on automation and hybrid cloud.</p>
+          <span class="conf-card-watch">See event ↗</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=pwT-kwIJOmU" target="_blank" rel="noopener" class="conf-card conf-card-link">
+          <h3>My non-traditional journey to tech</h3>
+          <p class="conf-card-meta">Video &middot; 13 Dec 2021</p>
+          <p>How I got into tech without the usual path, told for the SUSE channel.</p>
+          <span class="conf-card-watch">Watch ↗</span>
+        </a>
+        <a href="https://openexpoeurope.com/es/oe2018/ponentes/" target="_blank" rel="noopener" class="conf-card conf-card-link">
+          <h3>OpenExpo Europe</h3>
+          <p class="conf-card-meta">Madrid, Spain &middot; 2018</p>
+          <p>Open source in the enterprise, at OpenExpo in Madrid.</p>
+          <span class="conf-card-watch">See speakers ↗</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=QGnRznJ3Xz8" target="_blank" rel="noopener" class="conf-card conf-card-link">
+          <h3>OpenStack Summit</h3>
+          <p class="conf-card-meta">Sizing your OpenStack cloud &middot; Oct 2015</p>
+          <p>How to size an OpenStack cloud before you buy the hardware.</p>
+          <span class="conf-card-watch">Watch ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <p class="section-label">Built it myself</p>
+      <h2 class="section-heading">Projects</h2>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div>
+            <h3>sra-fleet-lab</h3>
+            <p class="project-meta">GitHub &middot; Sep 2026</p>
+          </div>
+          <p>My lab for multi-cluster GitOps with Fleet on three EKS clusters. The Fleet and Rancher field notes on this page came out of it.</p>
+          <span class="pill web2">Kubernetes</span>
+          <a href="https://github.com/vestival/sra-fleet-lab" target="_blank" rel="noopener" class="project-link">
+            View repo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>DBV Markdown Reader for macOS</h3>
+            <p class="project-meta">GitHub &middot; Aug to Sep 2026</p>
+          </div>
+          <p>I added the native macOS menu, Cmd shortcuts and printing to an open source Rust and Tauri Markdown reader. Three of my pull requests are merged upstream.</p>
+          <span class="pill web2">Open source</span>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="https://github.com/davidbuenov/dbv-md-reader/pulls?q=is%3Apr+author%3Avestival" target="_blank" rel="noopener" class="project-link">
+              My pull requests
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/vestival/dbv-md-reader" target="_blank" rel="noopener" class="project-link">
+              My fork
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/vestival/homebrew-dbv-md-reader" target="_blank" rel="noopener" class="project-link">
+              Homebrew tap
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>stellar-workshop-spain</h3>
+            <p class="project-meta">GitHub &middot; Sep 2026</p>
+          </div>
+          <p>Material for the Barcelona and Madrid Stellar workshops, used in both sessions.</p>
+          <span class="pill web3">AI</span>
+          <a href="https://github.com/vestival/stellar-workshop-spain" target="_blank" rel="noopener" class="project-link">
+            View repo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3>Stellar-Split</h3>
+            <p class="project-meta">GitHub &middot; Oct 2026</p>
+          </div>
+          <p>The HackMeridian project. Split shared expenses and settle in USDC on Stellar, live as an app with its own docs.</p>
+          <span class="pill web3">Web3</span>
+          <a href="https://github.com/vestival/Stellar-Split" target="_blank" rel="noopener" class="project-link">
+            View repo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EARLIER WORK -->
+  <section id="earlier">
+    <div class="container">
+      <p class="section-label">Before 2026</p>
+      <h2 class="section-heading">Earlier work</h2>
+      <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 32px; max-width: 560px; margin-top: -32px;">Product marketing for Web3 protocols, and my years in infrastructure before that. Pages that no longer exist link to a web.archive.org copy.</p>
+
       <details>
-        <summary>Show earlier work</summary>
+        <summary class="btn-outline">Show earlier work</summary>
 
-        <h3>Web3 talks and videos</h3>
-        <ul class="items compact">
-          <li>
-            <a class="item-title" href="https://www.youtube.com/watch?v=dfEGD3S6yfg">Aggregating Web3</a>
-            <p class="item-meta"><time datetime="2025-03-01">1 Mar 2025</time> · ETHDenver, Polygon Labs</p>
-            <p class="item-line">Polygon's aggregation story on the ETHDenver stage.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.youtube.com/watch?v=or2-t_de4AY">Beyond monolithic and modular: aggregation</a>
-            <p class="item-meta"><time datetime="2024-07">Jul 2024</time> · EthCC 2024, Polygon Labs</p>
-            <p class="item-line">How monolithic and modular chains meet through aggregation.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.youtube.com/watch?v=yO2Ykm2jROg">Ethereum's Beam Chain explainer</a>
-            <p class="item-meta"><time datetime="2024-11-20">20 Nov 2024</time> · video, Polygon Labs</p>
-            <p class="item-line">The Devcon Beam Chain proposal in plain terms.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://blockworks.com/event/permissionless-iii/speakers">Permissionless III</a>
-            <p class="item-meta"><time datetime="2024">2024</time> · Blockworks</p>
-            <p class="item-line">Speaker at Blockworks' Permissionless conference.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.youtube.com/watch?v=Ei123IoAP3I">Understanding pessimistic proofs</a>
-            <p class="item-meta"><time datetime="2024-06-11">11 Jun 2024</time> · video, Polygon Labs</p>
-            <p class="item-line">How pessimistic proofs protect cross-chain transfers in the AggLayer.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.youtube.com/watch?v=u5J3TYkdpvM">The Hitchhiker's Guide to Chainlink Proof of Reserve</a>
-            <p class="item-meta"><time datetime="2022-12-02">2 Dec 2022</time> · Chainlink Tech Talk 14</p>
-            <p class="item-line">How Proof of Reserve checks the collateral behind a token.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.youtube.com/watch?v=DzxmbLNvt-U">Quesadillas and beer with Chainlink</a>
-            <p class="item-meta"><time datetime="2022-06-29">29 Jun 2022</time> · video, in Spanish</p>
-            <p class="item-line">An informal Chainlink session for the Spanish-speaking community.</p>
-          </li>
-        </ul>
+        <!-- Web3 talks -->
+        <p class="writing-subsection-label">Web3 talks</p>
+        <div class="conf-grid">
+          <a href="https://www.youtube.com/watch?v=dfEGD3S6yfg" target="_blank" rel="noopener" class="conf-card conf-card-link">
+            <h3>ETH Denver 2025: Aggregating Web3</h3>
+            <p class="conf-card-meta">Denver, CO &middot; 1 Mar 2025</p>
+            <p>Polygon's aggregation story on the ETHDenver stage.</p>
+            <span class="conf-card-watch">Watch ↗</span>
+          </a>
+          <a href="https://www.youtube.com/watch?v=or2-t_de4AY" target="_blank" rel="noopener" class="conf-card conf-card-link">
+            <h3>EthCC 2024: Beyond monolithic and modular</h3>
+            <p class="conf-card-meta">Brussels, Belgium &middot; Jul 2024</p>
+            <p>How monolithic and modular chains meet through aggregation, for Polygon Labs.</p>
+            <span class="conf-card-watch">Watch ↗</span>
+          </a>
+          <a href="https://blockworks.com/event/permissionless-iii/speakers" target="_blank" rel="noopener" class="conf-card conf-card-link">
+            <h3>Permissionless</h3>
+            <p class="conf-card-meta">Blockworks &middot; 2024</p>
+            <p>Speaker at Blockworks' Permissionless conference.</p>
+            <span class="conf-card-watch">See speakers ↗</span>
+          </a>
+        </div>
+        <p class="meetup-label">Also at community events including</p>
+        <div class="meetup-cloud">
+          <span class="meetup-tag">CryptoDays</span>
+          <span class="meetup-tag">PolygonGuild</span>
+          <span class="meetup-tag">Dabl.club</span>
+        </div>
 
-        <h3>Web3 writing</h3>
-        <ul class="items compact">
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/x402-ideathon-berlin-recap-web3-builders-exploring-agentic-commerce">x402 Ideathon Berlin: Web3 builders exploring agentic commerce</a>
-            <p class="item-meta"><time datetime="2026-03-17">17 Mar 2026</time> · Algorand Foundation</p>
-            <p class="item-line">What builders made with agent payments at the Berlin ideathon.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.linkedin.com/pulse/http-402-finally-real-why-x402-matters-future-agentic-estival-hgiie/">HTTP 402 is finally real: why x402 matters for the future of agentic commerce</a>
-            <p class="item-meta"><time datetime="2026-02-12">12 Feb 2026</time> · LinkedIn</p>
-            <p class="item-line">The unused 402 status code, turned into a payment flow an agent can complete inside one request.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/x402-unlocking-the-agentic-commerce-era">x402: unlocking the agentic commerce era</a>
-            <p class="item-meta"><time datetime="2026-02-12">12 Feb 2026</time> · Algorand Foundation</p>
-            <p class="item-line">The launch post for x402 on Algorand.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.linkedin.com/pulse/eth-denver-2026-my-take-victor-estival-7zole/">ETH Denver 2026: my take</a>
-            <p class="item-meta"><time datetime="2026-02-22">22 Feb 2026</time> · LinkedIn</p>
-            <p class="item-line">What I took away from ETH Denver 2026.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/2025-on-algorand-whats-in-it-for-you-as-a-developer">2025 on Algorand: what's in it for you as a developer</a>
-            <p class="item-meta"><time datetime="2025-12-19">19 Dec 2025</time> · Algorand Foundation</p>
-            <p class="item-line">The developer changes of the year in one place.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/algorand-goes-peer-to-peer-a-new-era-for-the-network">Algorand goes peer-to-peer</a>
-            <p class="item-meta"><time datetime="2025-12-09">9 Dec 2025</time> · Algorand Foundation</p>
-            <p class="item-line">Why the network moved to peer-to-peer networking and what changes for node runners.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/algorand-speaks-native-p2p-now-in-nodekit-and-func">Algorand speaks native P2P: now in NodeKit and Func</a>
-            <p class="item-meta"><time datetime="2025-12-09">9 Dec 2025</time> · Algorand Foundation</p>
-            <p class="item-line">How to turn on peer-to-peer mode in the node tools.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/algorand-hackathons-2025-a-year-of-innovation-code-and-blockchain-breakthroughs">Algorand hackathons 2025</a>
-            <p class="item-meta"><time datetime="2025-12-03">3 Dec 2025</time> · Algorand Foundation</p>
-            <p class="item-line">A year of hackathons, the winners and what they built.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/how-to-use-liquid-auth-and-pera-wallet-for-secure-passwordless-sign-in-to-your-favorite-sites">How to use Liquid Auth and Pera Wallet for passwordless sign-in</a>
-            <p class="item-meta"><time datetime="2025-11-12">12 Nov 2025</time> · Algorand Foundation</p>
-            <p class="item-line">A step by step guide to signing in with a wallet.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://algorand.co/blog/introducing-liquid-auth-in-pera-decentralized-passwordless-web3-authentication-for-user-owned-identity">Introducing Liquid Auth in Pera</a>
-            <p class="item-meta"><time datetime="2025-11-12">12 Nov 2025</time> · Algorand Foundation</p>
-            <p class="item-line">The launch post for passwordless sign-in in Pera Wallet.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20260519213738/https://polygon.technology/blog/your-guide-to-agglayer-events-at-ethdenver-cryptos-premier-conference">Your guide to AggLayer events at ETHDenver</a>
-            <p class="item-meta"><time datetime="2025-02">Feb 2025</time> · Polygon Labs, archived copy</p>
-            <p class="item-line">Where to find the AggLayer sessions during ETHDenver week.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://polygon.technology/blog/open-source-polygon-plonky3-is-once-again-the-fastest-zk-proving-system">Open source Polygon Plonky3 is once again the fastest ZK proving system</a>
-            <p class="item-meta"><time datetime="2024-12-12">12 Dec 2024</time> · Polygon Labs</p>
-            <p class="item-line">The benchmark results behind the Plonky3 claim.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20260519224302/https://polygon.technology/blog/ethereum-beam-chain-faq-to-unpack-the-big-devcon-announcement">Ethereum Beam Chain FAQ</a>
-            <p class="item-meta"><time datetime="2024-11">Nov 2024</time> · Polygon Labs, archived copy</p>
-            <p class="item-line">Questions and answers on the Beam Chain proposal from Devcon.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://polygon.technology/blog/upgrade-every-evm-chain-to-zk-introducing-the-type-1-prover">Upgrade every EVM chain to ZK: introducing the Type 1 Prover</a>
-            <p class="item-meta"><time datetime="2024-02-08">8 Feb 2024</time> · Polygon Labs</p>
-            <p class="item-line">The launch post for the Type 1 Prover.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20240717232716/https://polkadot.network/blog/polkadot-1-0-pioneering-blockspace-composability-and-scalability/">Polkadot 1.0: blockspace, composability and scalability</a>
-            <p class="item-meta"><time datetime="2023">2023</time> · Parity, archived copy</p>
-            <p class="item-line">What shipped in Polkadot 1.0 for developers.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20240420133631/https://polkadot.network/blog/how-polkadots-blockspace-empowers-developers/">How Polkadot's blockspace empowers developers</a>
-            <p class="item-meta"><time datetime="2023">2023</time> · Parity, archived copy</p>
-            <p class="item-line">Blockspace as the thing a developer buys on Polkadot.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://chain.link/blog/stablecoins-and-proof-of-reserve">Stablecoins and Proof of Reserve</a>
-            <p class="item-meta"><time datetime="2023-03-07">7 Mar 2023</time> · Chainlink Labs</p>
-            <p class="item-line">How Proof of Reserve checks what backs a stablecoin.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20240624172119/https://blog.chain.link/verify-stablecoin-collateral-with-chainlink-proof-of-reserve/">Verify stablecoin collateral with Chainlink Proof of Reserve</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · Chainlink Labs, archived copy</p>
-            <p class="item-line">A walkthrough for teams issuing stablecoins.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20260410095956/https://blog.chain.link/verify-bitcoin-collateral-with-chainlink-proof-of-reserve/">Verify Bitcoin collateral with Chainlink Proof of Reserve</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · Chainlink Labs, archived copy</p>
-            <p class="item-line">The same check for wrapped Bitcoin.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://chain.link/blog/using-chainlink-proof-of-reserve-to-unlock-cross-chain-liquidity">Using Chainlink Proof of Reserve to unlock cross-chain liquidity</a>
-            <p class="item-meta"><time datetime="2022-02-22">22 Feb 2022</time> · Chainlink Labs</p>
-            <p class="item-line">Proof of Reserve for assets that move between chains.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20260612180907/https://chain.link/case-studies/cache-gold">Case study: Cache Gold</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · Chainlink Labs, archived copy</p>
-            <p class="item-line">A gold-backed token that publishes its reserves with Chainlink.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20260412004429/https://chain.link/case-studies/swingby">Case study: Swingby</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · Chainlink Labs, archived copy</p>
-            <p class="item-line">A cross-chain bridge that uses Chainlink services.</p>
-          </li>
-        </ul>
+        <!-- Web3 videos -->
+        <p class="writing-subsection-label" style="margin-top: 48px;">Web3 videos</p>
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/yO2Ykm2jROg" title="Ethereum's Beam Chain Explainer" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Ethereum's Beam Chain Explainer</p>
+              <span class="video-company">Polygon Labs &middot; 20 Nov 2024</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/Ei123IoAP3I" title="Understanding Pessimistic Proofs: Enhancing Cross-Chain Security" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Understanding Pessimistic Proofs: Enhancing Cross-Chain Security</p>
+              <span class="video-company">Polygon Labs &middot; 11 Jun 2024</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/u5J3TYkdpvM" title="The Hitchhiker's Guide to Chainlink Proof of Reserve" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <p class="video-title">The Hitchhiker's Guide to Chainlink Proof of Reserve</p>
+              <span class="video-company">Chainlink Labs &middot; Tech Talk #14 &middot; 2 Dec 2022</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/DzxmbLNvt-U" title="Quesadillas & Beer with Chainlink" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Quesadillas &amp; Beer with Chainlink</p>
+              <span class="video-company">Chainlink Labs &middot; en Espa&ntilde;ol &middot; 29 Jun 2022</span>
+            </div>
+          </div>
+        </div>
 
-        <h3>Product marketing work</h3>
-        <ul class="items compact">
-          <li>
-            <a class="item-title" href="https://strategos.vestival.es/">Strategos</a>
-            <p class="item-meta"><time datetime="2025">2025</time> · my first dapp</p>
-            <p class="item-line">A blockchain strategy game I built on Algorand while I was marketing it to developers.</p>
-            <p class="item-also">Also on <a href="https://github.com/vestival/strategos">GitHub</a></p>
-          </li>
-          <li>
-            <a class="item-title" href="https://chain.link/proof-of-reserve">Chainlink Proof of Reserve page</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · Chainlink Labs</p>
-            <p class="item-line">Landing page and interactive animations for the product.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://chain.link/webinars">Chainlink Tech Talks</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · Chainlink Labs</p>
-            <p class="item-line">Scripts and outlines for most of the Tech Talks video series, now listed with the Chainlink webinars.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://app.storylane.io/share/zyouvxasgjgn">Chainlink VRF interactive demo</a>
-            <p class="item-meta"><time datetime="2022">2022</time> · SmartCon</p>
-            <p class="item-line">A self-serve product demo built with Storylane for SmartCon 2022.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.cerbos.dev/for-developers">Cerbos developer page</a>
-            <p class="item-meta"><time datetime="2021">2021</time> · Cerbos</p>
-            <p class="item-line">Developer-focused landing page for the Cerbos authorization platform.</p>
-          </li>
-        </ul>
+        <!-- Web3 writing -->
+        <p class="writing-subsection-label" style="margin-top: 48px;">Web3 writing</p>
+        <div class="writing-groups">
 
-        <h3>Infrastructure, before Web3</h3>
-        <ul class="items compact">
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20230926200217/https://www.suse.com/c/the-future-of-pharma-depends-on-the-cloud-and-secure-data/">The future of pharma depends on the cloud and secure data</a>
-            <p class="item-meta"><time datetime="2021">2021</time> · suse.com, archived copy</p>
-            <p class="item-line">Cloud and data security for pharmaceutical companies.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://web.archive.org/web/20240414230434/https://www.suse.com/c/the-right-kind-of-transformation-is-vital-for-energy-sector-survival/">The right kind of transformation is vital for energy sector survival</a>
-            <p class="item-meta"><time datetime="2021">2021</time> · suse.com, archived copy</p>
-            <p class="item-line">Infrastructure modernization for energy companies.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://github.com/vestival/rhte-fy19/blob/master/cloudforms-and-ansible-deep-dive/lab/index.md">CloudForms and Ansible deep dive lab</a>
-            <p class="item-meta"><time datetime="2018">2018</time> · Red Hat Tech Exchange</p>
-            <p class="item-line">A hands-on lab guide for Red Hat's technical field event.</p>
-          </li>
-          <li>
-            <a class="item-title" href="https://www.manageiq.org/blog/2016/09/my-first-ansible-control-action/">My first Ansible control action</a>
-            <p class="item-meta"><time datetime="2016-09">Sep 2016</time> · ManageIQ blog</p>
-            <p class="item-line">Running an Ansible playbook from a ManageIQ policy, step by step.</p>
-          </li>
-        </ul>
+          <div class="writing-group">
+            <div class="writing-group-head">
+              <img src="logos/algorand.png" alt="" class="writing-logo-sm" onerror="this.style.display='none'">
+              <h3>Algorand Foundation</h3>
+              <span class="pill web3">Web3</span>
+            </div>
+            <div class="other-grid">
+              <a href="https://algorand.co/blog/x402-ideathon-berlin-recap-web3-builders-exploring-agentic-commerce" target="_blank" rel="noopener" class="other-card">
+                <h4>x402 Ideathon Berlin: Web3 builders exploring agentic commerce</h4>
+                <p>17 Mar 2026. What builders made with agent payments at the Berlin ideathon.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/x402-unlocking-the-agentic-commerce-era" target="_blank" rel="noopener" class="other-card">
+                <h4>x402: Unlocking the agentic commerce era</h4>
+                <p>12 Feb 2026. The launch post for x402 on Algorand.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/2025-on-algorand-whats-in-it-for-you-as-a-developer" target="_blank" rel="noopener" class="other-card">
+                <h4>2025 on Algorand: what's in it for you as a developer</h4>
+                <p>19 Dec 2025. The developer changes of the year in one place.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/algorand-goes-peer-to-peer-a-new-era-for-the-network" target="_blank" rel="noopener" class="other-card">
+                <h4>Algorand goes peer-to-peer</h4>
+                <p>9 Dec 2025. Why the network moved to peer-to-peer networking and what changes for node runners.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/algorand-speaks-native-p2p-now-in-nodekit-and-func" target="_blank" rel="noopener" class="other-card">
+                <h4>Algorand speaks native P2P: now in NodeKit and Func</h4>
+                <p>9 Dec 2025. How to turn on peer-to-peer mode in the node tools.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/algorand-hackathons-2025-a-year-of-innovation-code-and-blockchain-breakthroughs" target="_blank" rel="noopener" class="other-card">
+                <h4>Algorand hackathons 2025</h4>
+                <p>3 Dec 2025. A year of hackathons, the winners and what they built.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/how-to-use-liquid-auth-and-pera-wallet-for-secure-passwordless-sign-in-to-your-favorite-sites" target="_blank" rel="noopener" class="other-card">
+                <h4>How to use Liquid Auth and Pera Wallet for passwordless sign-in</h4>
+                <p>12 Nov 2025. A step by step guide to signing in with a wallet.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://algorand.co/blog/introducing-liquid-auth-in-pera-decentralized-passwordless-web3-authentication-for-user-owned-identity" target="_blank" rel="noopener" class="other-card">
+                <h4>Introducing Liquid Auth in Pera</h4>
+                <p>12 Nov 2025. The launch post for passwordless sign-in in Pera Wallet.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="writing-group">
+            <div class="writing-group-head">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <h3>LinkedIn Articles</h3>
+              <span class="pill" style="background: #e8f0fe; color: #0A66C2;">Personal</span>
+            </div>
+            <div class="other-grid">
+              <a href="https://www.linkedin.com/pulse/eth-denver-2026-my-take-victor-estival-7zole/" target="_blank" rel="noopener" class="other-card">
+                <h4>ETH Denver 2026: my take</h4>
+                <p>22 Feb 2026. What I took away from ETH Denver 2026.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://www.linkedin.com/pulse/http-402-finally-real-why-x402-matters-future-agentic-estival-hgiie/" target="_blank" rel="noopener" class="other-card">
+                <h4>HTTP 402 is finally real: why x402 matters for agentic commerce</h4>
+                <p>12 Feb 2026. The unused 402 status code, turned into a payment flow an agent can complete inside one request.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="writing-group">
+            <div class="writing-group-head">
+              <img src="logos/polygon.png" alt="" class="writing-logo-sm" onerror="this.style.display='none'">
+              <h3>Polygon Labs</h3>
+              <span class="pill web3">Web3</span>
+            </div>
+            <div class="other-grid">
+              <a href="https://web.archive.org/web/20260519213738/https://polygon.technology/blog/your-guide-to-agglayer-events-at-ethdenver-cryptos-premier-conference" target="_blank" rel="noopener" class="other-card">
+                <h4>Your guide to AggLayer events at ETHDenver</h4>
+                <p>Feb 2025, archived copy. Where to find the AggLayer sessions during ETHDenver week.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://polygon.technology/blog/open-source-polygon-plonky3-is-once-again-the-fastest-zk-proving-system" target="_blank" rel="noopener" class="other-card">
+                <h4>Open source: Polygon Plonky3 is once again the fastest ZK proving system</h4>
+                <p>12 Dec 2024. The benchmark results behind the Plonky3 claim.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://web.archive.org/web/20260519224302/https://polygon.technology/blog/ethereum-beam-chain-faq-to-unpack-the-big-devcon-announcement" target="_blank" rel="noopener" class="other-card">
+                <h4>Ethereum Beam Chain FAQ</h4>
+                <p>Nov 2024, archived copy. Questions and answers on the Beam Chain proposal from Devcon.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://polygon.technology/blog/upgrade-every-evm-chain-to-zk-introducing-the-type-1-prover" target="_blank" rel="noopener" class="other-card">
+                <h4>Upgrade every EVM chain to ZK: introducing the Type 1 Prover</h4>
+                <p>8 Feb 2024. The launch post for the Type 1 Prover.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="writing-group">
+            <div class="writing-group-head">
+              <img src="logos/polkadot.png" alt="" class="writing-logo-sm" onerror="this.style.display='none'">
+              <h3>Parity / Polkadot</h3>
+              <span class="pill web3">Web3</span>
+            </div>
+            <div class="other-grid">
+              <a href="https://web.archive.org/web/20240717232716/https://polkadot.network/blog/polkadot-1-0-pioneering-blockspace-composability-and-scalability/" target="_blank" rel="noopener" class="other-card">
+                <h4>Polkadot 1.0: blockspace, composability and scalability</h4>
+                <p>2023, archived copy. What shipped in Polkadot 1.0 for developers.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://web.archive.org/web/20240420133631/https://polkadot.network/blog/how-polkadots-blockspace-empowers-developers/" target="_blank" rel="noopener" class="other-card">
+                <h4>How Polkadot's blockspace empowers developers</h4>
+                <p>2023, archived copy. Blockspace as the thing a developer buys on Polkadot.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="writing-group">
+            <div class="writing-group-head">
+              <img src="logos/chainlink.png" alt="" class="writing-logo-sm" onerror="this.style.display='none'">
+              <h3>Chainlink Labs</h3>
+              <span class="pill web3">Web3</span>
+            </div>
+            <div class="other-grid">
+              <a href="https://chain.link/blog/stablecoins-and-proof-of-reserve" target="_blank" rel="noopener" class="other-card">
+                <h4>Stablecoins and Proof of Reserve</h4>
+                <p>7 Mar 2023. How Proof of Reserve checks what backs a stablecoin.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://web.archive.org/web/20240624172119/https://blog.chain.link/verify-stablecoin-collateral-with-chainlink-proof-of-reserve/" target="_blank" rel="noopener" class="other-card">
+                <h4>Verify stablecoin collateral with Chainlink Proof of Reserve</h4>
+                <p>2022, archived copy. A walkthrough for teams issuing stablecoins.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://web.archive.org/web/20260410095956/https://blog.chain.link/verify-bitcoin-collateral-with-chainlink-proof-of-reserve/" target="_blank" rel="noopener" class="other-card">
+                <h4>Verify Bitcoin collateral with Chainlink Proof of Reserve</h4>
+                <p>2022, archived copy. The same check for wrapped Bitcoin.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://chain.link/blog/using-chainlink-proof-of-reserve-to-unlock-cross-chain-liquidity" target="_blank" rel="noopener" class="other-card">
+                <h4>Using Chainlink Proof of Reserve to unlock cross-chain liquidity</h4>
+                <p>22 Feb 2022. Proof of Reserve for assets that move between chains.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+            </div>
+            <p class="writing-subsection-label">Case studies</p>
+            <div class="other-grid">
+              <a href="https://web.archive.org/web/20260612180907/https://chain.link/case-studies/cache-gold" target="_blank" rel="noopener" class="other-card">
+                <h4>Cache Gold</h4>
+                <p>2022, archived copy. A gold-backed token that publishes its reserves with Chainlink.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+              <a href="https://web.archive.org/web/20260412004429/https://chain.link/case-studies/swingby" target="_blank" rel="noopener" class="other-card">
+                <h4>Swingby</h4>
+                <p>2022, archived copy. A cross-chain bridge that uses Chainlink Proof of Reserve.</p>
+                <span class="article-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Product marketing work -->
+        <p class="writing-subsection-label" style="margin-top: 48px;">Product marketing work</p>
+        <div class="other-grid">
+          <a href="https://strategos.vestival.es/" target="_blank" rel="noopener" class="other-card">
+            <h4>Strategos</h4>
+            <p>2025. A blockchain strategy game I built on Algorand while I was marketing it to developers. Code on github.com/vestival/strategos.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://chain.link/proof-of-reserve" target="_blank" rel="noopener" class="other-card">
+            <h4>Proof of Reserve</h4>
+            <p>2022. Interactive animations and landing page for Chainlink's Proof of Reserve product.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://chain.link/webinars" target="_blank" rel="noopener" class="other-card">
+            <h4>Chainlink Tech Talks</h4>
+            <p>2022. Scripts and outlines for most of the Tech Talks video series, now listed with the Chainlink webinars.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://app.storylane.io/share/zyouvxasgjgn" target="_blank" rel="noopener" class="other-card">
+            <h4>Chainlink VRF interactive demo</h4>
+            <p>2022. A self-serve product demo built with Storylane for SmartCon 2022.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://www.cerbos.dev/for-developers" target="_blank" rel="noopener" class="other-card">
+            <h4>Cerbos Developer Page</h4>
+            <p>2021. Developer-focused landing page for the Cerbos authorization platform.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+        </div>
+
+        <!-- Infrastructure before Web3 -->
+        <p class="writing-subsection-label" style="margin-top: 48px;">Infrastructure writing and labs, before Web3</p>
+        <div class="other-grid">
+          <a href="https://web.archive.org/web/20230926200217/https://www.suse.com/c/the-future-of-pharma-depends-on-the-cloud-and-secure-data/" target="_blank" rel="noopener" class="other-card">
+            <h4>The future of pharma depends on the cloud and secure data</h4>
+            <p>2021, archived copy. Cloud and data security for pharmaceutical companies.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://web.archive.org/web/20240414230434/https://www.suse.com/c/the-right-kind-of-transformation-is-vital-for-energy-sector-survival/" target="_blank" rel="noopener" class="other-card">
+            <h4>The right kind of transformation is vital for energy sector survival</h4>
+            <p>2021, archived copy. Infrastructure modernization for energy companies.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://github.com/vestival/rhte-fy19/blob/master/cloudforms-and-ansible-deep-dive/lab/index.md" target="_blank" rel="noopener" class="other-card">
+            <h4>Hands-on Labs</h4>
+            <p>2018. CloudForms and Ansible lab guide for Red Hat Tech Exchange.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+          <a href="https://www.manageiq.org/blog/2016/09/my-first-ansible-control-action/" target="_blank" rel="noopener" class="other-card">
+            <h4>My First Ansible Control Action</h4>
+            <p>Sep 2016. Running an Ansible playbook from a ManageIQ policy, step by step.</p>
+            <span class="article-arrow">↗</span>
+          </a>
+        </div>
       </details>
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
-      <span>&copy; 2026 Victor Estival. Views are my own.</span>
-      <a href="/feed.xml">RSS</a>
+      <span>&copy; 2026 Victor Estival</span>
+      <a href="https://github.com/vestival" target="_blank" rel="noopener" class="footer-github">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        github.com/vestival
+      </a>
     </div>
   </footer>
 
-  <script src="/site.js"></script>
+  <script>
+    const html = document.documentElement;
+
+    // Theme
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // Font size – 100% to 300% in 25% steps
+    const ZOOM_LEVELS = [1, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0];
+    let zoomIndex = parseInt(localStorage.getItem('font-level') || '0', 10);
+    const fontDown = document.getElementById('fontDown');
+    const fontUp   = document.getElementById('fontUp');
+    function applyZoom() {
+      document.body.style.zoom = ZOOM_LEVELS[zoomIndex];
+      localStorage.setItem('font-level', zoomIndex);
+      fontDown.disabled = zoomIndex === 0;
+      fontUp.disabled   = zoomIndex === ZOOM_LEVELS.length - 1;
+    }
+    applyZoom();
+    fontDown.addEventListener('click', () => { if (zoomIndex > 0) { zoomIndex--; applyZoom(); } });
+    fontUp.addEventListener('click',   () => { if (zoomIndex < ZOOM_LEVELS.length - 1) { zoomIndex++; applyZoom(); } });
+  </script>
+
 </body>
 </html>

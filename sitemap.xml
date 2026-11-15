@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vestival.es/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://vestival.es/portfolio</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://vestival.es/writing/</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+  <!-- One <url> per post. Copy, fill in, uncomment.
+  <url>
+    <loc>https://vestival.es/writing/SLUG/</loc>
+    <lastmod>2026-12-07</lastmod>
+  </url>
+  -->
+</urlset>

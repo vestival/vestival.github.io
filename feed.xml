@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Victor Estival, writing</title>
+    <link>https://vestival.es/writing/</link>
+    <atom:link href="https://vestival.es/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Long pieces on Kubernetes fleets and AI agents on real work.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Nov 2026 10:00:00 +0100</lastBuildDate>
+
+    <!--
+      One <item> per post, newest first. Copy this block, fill it in, uncomment it,
+      and update lastBuildDate above. pubDate uses RFC 822 format.
+
+    <item>
+      <title>TITLE OF THE ORCA ARTICLE</title>
+      <link>https://vestival.es/writing/SLUG/</link>
+      <guid isPermaLink="true">https://vestival.es/writing/SLUG/</guid>
+      <pubDate>Mon, 07 Dec 2026 09:00:00 +0100</pubDate>
+      <description>ONE-SENTENCE SUMMARY</description>
+    </item>
+    -->
+
+  </channel>
+</rss>

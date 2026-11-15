@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing - Victor Estival</title>
+  <meta name="description" content="Long-form writing by Victor Estival on Kubernetes fleets and AI agents on real work. Originals here, copies on dev.to and DZone." />
+  <link rel="canonical" href="https://vestival.es/writing/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Victor Estival" />
+  <meta property="og:url" content="https://vestival.es/writing/" />
+  <meta property="og:title" content="Writing - Victor Estival" />
+  <meta property="og:description" content="Long-form writing on Kubernetes fleets and AI agents on real work." />
+  <meta property="og:image" content="https://vestival.es/og.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@victorestival" />
+  <meta name="twitter:creator" content="@victorestival" />
+  <meta name="twitter:title" content="Writing - Victor Estival" />
+  <meta name="twitter:description" content="Long-form writing on Kubernetes fleets and AI agents on real work." />
+  <meta name="twitter:image" content="https://vestival.es/og.jpg" />
+  <link rel="alternate" type="application/rss+xml" title="Victor Estival, writing" href="https://vestival.es/feed.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="https://umami.vestival.es/script.js" data-website-id="8cd49a4f-4316-427f-9799-4610c2093880"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="container">
+      <a href="/" class="nav-logo">ve</a>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/writing/" aria-current="page">Writing</a></li>
+      </ul>
+      <button class="font-toggle" id="fontDown" aria-label="Decrease font size">A−</button>
+      <button class="font-toggle" id="fontUp" aria-label="Increase font size">A+</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-sun">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="icon-moon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE INTRO -->
+  <div class="page-intro">
+    <div class="container">
+      <a href="/" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Home
+      </a>
+      <p class="section-label">Writing</p>
+      <h1 class="section-heading" style="margin-bottom: 16px;">Writing</h1>
+      <p class="page-intro-text">Long pieces on Kubernetes fleets and on AI agents doing real work. New pieces go up here first. Copies on dev.to and DZone point back here as the original. <a href="/feed.xml" style="color: var(--accent);">Follow with RSS</a>.</p>
+    </div>
+  </div>
+
+  <!--
+    ON THIS SITE. Uncomment this section when the first post goes live.
+    Newest first. One other-card per post, same shape as the Orca slot below.
+
+  <section id="here">
+    <div class="container">
+      <p class="section-label">Published here</p>
+      <h2 class="section-heading">On this site</h2>
+      <div class="other-grid">
+        <a href="/writing/SLUG/" class="other-card">
+          <h4>TITLE OF THE ORCA ARTICLE</h4>
+          <p>7 Dec 2026. ONE LINE ABOUT THE PIECE.</p>
+          <span class="article-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- PUBLISHED ELSEWHERE -->
+  <section id="elsewhere">
+    <div class="container">
+      <p class="section-label">Published</p>
+      <h2 class="section-heading">Published elsewhere</h2>
+      <div class="other-grid">
+        <a href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45" target="_blank" rel="noopener" class="other-card">
+          <h4>After 15 years of VS Code, I gave my backlog to parallel agents in Orca</h4>
+          <p>12 Nov 2026 &middot; dev.to</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://dev.to/vestival/disabling-a-user-in-rancher-leaves-every-binding-in-place-remove-the-membership-if-you-mean-12c4" target="_blank" rel="noopener" class="other-card">
+          <h4>Disabling a user in Rancher leaves every binding in place. Remove the membership if you mean it</h4>
+          <p>12 Nov 2026 &middot; dev.to</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk" target="_blank" rel="noopener" class="other-card">
+          <h4>I ran two skill scanners on my own agent skills. One said do not install.</h4>
+          <p>11 Nov 2026 &middot; dev.to</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://dzone.com/articles/measured-outcomes-manually-scaling-fleet-prod" target="_blank" rel="noopener" class="other-card">
+          <h4>Three measured outcomes of manually scaling Fleet in prod</h4>
+          <p>9 Nov 2026 &middot; DZone</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://dev.to/vestival/back-up-rancher-before-you-upgrade-three-ways-the-backup-step-failed-in-my-2152-lab-5hih" target="_blank" rel="noopener" class="other-card">
+          <h4>Back up Rancher before you upgrade: three ways the backup step failed in my 2.15.2 lab</h4>
+          <p>5 Nov 2026 &middot; dev.to</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/what-suse-rancher-for-aws-builds-in-your-aws-account-and-what-it-removes/" target="_blank" rel="noopener" class="other-card">
+          <h4>What SUSE Rancher for AWS builds in your AWS account, and what it removes</h4>
+          <p>29 Oct 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://devm.io/devops/gitops-scale-kubernetes" target="_blank" rel="noopener" class="other-card">
+          <h4>GitOps at Scale: patterns that survive 50 clusters</h4>
+          <p>Oct 2026 &middot; devm.io</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/the-first-thing-you-see-when-an-eks-cluster-lands/" target="_blank" rel="noopener" class="other-card">
+          <h4>The first thing you see when an EKS cluster lands</h4>
+          <p>23 Oct 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/why-importing-stops-and-creating-does-not/" target="_blank" rel="noopener" class="other-card">
+          <h4>Why importing stops and creating does not</h4>
+          <p>15 Oct 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/creating-your-first-eks-cluster-and-what-it-costs/" target="_blank" rel="noopener" class="other-card">
+          <h4>Creating your first EKS cluster, and what it costs</h4>
+          <p>9 Oct 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/your-first-10-minutes-on-suse-rancher-for-aws/" target="_blank" rel="noopener" class="other-card">
+          <h4>Your first 10 minutes on SUSE Rancher for AWS</h4>
+          <p>5 Oct 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/managing-multiple-eks-clusters-why-cluster-3-is-the-wall/" target="_blank" rel="noopener" class="other-card">
+          <h4>Managing multiple EKS clusters: why cluster #3 is the wall</h4>
+          <p>25 Sep 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+        <a href="https://www.suse.com/blog/do-you-really-need-more-than-eks-an-honest-answer/" target="_blank" rel="noopener" class="other-card">
+          <h4>Do you really need more than EKS? An honest answer</h4>
+          <p>26 Aug 2026 &middot; suse.com</p>
+          <span class="article-arrow">↗</span>
+        </a>
+      </div>
+      <div class="hero-cta" style="margin: 40px 0 0;">
+        <a href="/portfolio.html" class="btn-outline">Talks, projects and older writing</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>&copy; 2026 Victor Estival</span>
+      <a href="https://github.com/vestival" target="_blank" rel="noopener" class="footer-github">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        github.com/vestival
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    // Theme
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // Font size – 100% to 300% in 25% steps
+    const ZOOM_LEVELS = [1, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0];
+    let zoomIndex = parseInt(localStorage.getItem('font-level') || '0', 10);
+    const fontDown = document.getElementById('fontDown');
+    const fontUp   = document.getElementById('fontUp');
+    function applyZoom() {
+      document.body.style.zoom = ZOOM_LEVELS[zoomIndex];
+      localStorage.setItem('font-level', zoomIndex);
+      fontDown.disabled = zoomIndex === 0;
+      fontUp.disabled   = zoomIndex === ZOOM_LEVELS.length - 1;
+    }
+    applyZoom();
+    fontDown.addEventListener('click', () => { if (zoomIndex > 0) { zoomIndex--; applyZoom(); } });
+    fontUp.addEventListener('click',   () => { if (zoomIndex < ZOOM_LEVELS.length - 1) { zoomIndex++; applyZoom(); } });
+  </script>
+
+</body>
+</html>

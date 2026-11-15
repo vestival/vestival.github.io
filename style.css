@@ -901,3 +901,8 @@ header ul a[aria-current="page"] { color: var(--text); font-weight: 600; }
   header ul li:nth-child(4), header ul li:nth-child(5) { display: none; }
   .hero-cta { flex-wrap: wrap; }
 }
+
+/* ── Earlier work (collapsed) ─────────────────────────────────── */
+details > summary { display: inline-block; cursor: pointer; list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] > summary { margin-bottom: 40px; }

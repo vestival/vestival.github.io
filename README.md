@@ -38,6 +38,12 @@ The first slot is reserved for the Orca article planned for 7 Dec 2026.
 
 Copy an existing `<li>` in the right section of `portfolio.html`. Every item has a title link, a date, one line, and "Also on" links for its copies. Only add items with a public URL.
 
+## Decisions
+
+- Typography: Sora for headings, Inter for body text. Intentional, kept from the earlier version of the site. Do not swap it.
+- `_archive/` holds assets the site no longer uses (company logos, the old `victor.png` portrait). Kept for reference, not linked from any page.
+- Analytics: Umami at umami.vestival.es, with its own site ID for the apex domain. The script tag is in the `<head>` of every page, including the post template.
+
 ## Rules for copy on this site
 
 Write in the first person, in plain words. No em dashes, semicolons, hashtags or `<hr>`. SUSE can be named as the current role. No other employer or client is named as current.

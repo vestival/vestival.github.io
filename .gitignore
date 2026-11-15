@@ -3,3 +3,6 @@
 
 # graft local graph cache, regenerable
 graft/
+
+# local design-linter config
+.impeccable/

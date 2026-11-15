@@ -1,2 +1,5 @@
 .netlify
 .DS_Store
+
+# graft local graph cache, regenerable
+graft/

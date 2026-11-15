@@ -3,498 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victor Estival</title>
-  <meta name="description" content="Technical product marketing for AI and infrastructure. 20+ years in tech. Based in Madrid." />
+  <title>Victor Estival: infrastructure and AI, explained</title>
+  <meta name="description" content="I explain infrastructure and AI to the people who run it. Kubernetes fleets, AI agents on real work, and technical product marketing. Madrid." />
+  <link rel="canonical" href="https://vestival.es/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Victor Estival" />
+  <meta property="og:url" content="https://vestival.es/" />
+  <meta property="og:title" content="Victor Estival: infrastructure and AI, explained" />
+  <meta property="og:description" content="I explain infrastructure and AI to the people who run it. Kubernetes fleets, AI agents on real work, and technical product marketing." />
+  <meta property="og:image" content="https://vestival.es/og.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@victorestival" />
+  <meta name="twitter:creator" content="@victorestival" />
+  <meta name="twitter:title" content="Victor Estival: infrastructure and AI, explained" />
+  <meta name="twitter:description" content="I explain infrastructure and AI to the people who run it. Kubernetes fleets, AI agents on real work, and technical product marketing." />
+  <meta name="twitter:image" content="https://vestival.es/og.jpg" />
+  <link rel="alternate" type="application/rss+xml" title="Victor Estival, writing" href="https://vestival.es/feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
   <header>
-    <nav class="container">
-      <a href="/" class="nav-logo">ve</a>
+    <nav class="container" aria-label="Main">
+      <a href="/" class="nav-logo" aria-label="Home">ve</a>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="/portfolio">Work</a></li>
+        <li><a href="/writing/">Writing</a></li>
       </ul>
-      <button class="font-toggle" id="fontDown" aria-label="Decrease font size">A−</button>
-      <button class="font-toggle" id="fontUp" aria-label="Increase font size">A+</button>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="icon-sun">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </span>
-        <span class="icon-moon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </span>
-      </button>
+      <div class="nav-tools">
+        <button id="fontDown" aria-label="Decrease font size">A−</button>
+        <button id="fontUp" aria-label="Increase font size">A+</button>
+        <button id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="hero-greeting">Hi there, I'm</p>
-        <h1>Victor<br><span>Estival</span></h1>
-        <p class="hero-title">Technical Product Marketing</p>
-        <p class="hero-bio">
-          I explain infrastructure and AI to the people who run it.
-          20+ years in tech, from mainframes to Kubernetes to AI agents.
-          Based in <strong>Madrid, Spain</strong>.
-        </p>
-        <div class="hero-tags">
-          <span class="pill web2">Infrastructure</span>
-          <span class="pill-sep">+</span>
-          <span class="pill web3">AI</span>
-        </div>
-        <div class="hero-cta">
-          <a href="portfolio.html" class="btn-primary">View my work</a>
-          <a href="#contact" class="btn-outline">Get in touch</a>
-        </div>
-        <div class="hero-social">
-          <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://github.com/vestival" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </a>
-          <a href="https://twitter.com/victorestival" target="_blank" rel="noopener" aria-label="Twitter/X">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
+  <main class="container">
+
+    <section class="intro">
+      <div class="intro-head">
+        <img src="/avatar.jpg" alt="Illustrated portrait of Victor Estival" width="88" height="88" />
+        <div>
+          <p class="name">Victor Estival</p>
+          <h1>I explain infrastructure and AI to the people who run it.</h1>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="avatar-wrap">
-          <img src="victor.png" alt="Victor Estival illustration" />
-        </div>
-      </div>
-    </div>
-  </section>
+      <p>I'm a technical product marketing manager at SUSE, where I work on Rancher and Kubernetes. I spend most of my week with platform teams running Kubernetes fleets, and I test what they ask about in my own lab before I write about it. I also run AI agents on my own backlog and write up what breaks, with the numbers. Before marketing I was a solutions architect and an OpenStack cloud architect, based in Madrid. Views on this site are my own.</p>
+      <p class="now"><strong>Now:</strong> Kubernetes fleets with Rancher and Fleet on Amazon EKS. Agents on real work, with Orca running my backlog in parallel worktrees. <span class="muted">Updated 15 Nov 2026.</span></p>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <p class="section-label">About me</p>
-      <div class="about-grid">
-        <div class="about-main">
-          <h2>I help technical products<br>find their voice.</h2>
-          <p>
-            I've spent 20+ years at the intersection of technology and storytelling.
-            I started my career deep in infrastructure, cloud, and open source,
-            working with teams at <strong>Canonical</strong>, <strong>Red Hat</strong>,
-            <strong>Microsoft</strong>, and <strong>SUSE</strong>.
-          </p>
-          <p>
-            From 2022 to 2026 I led product marketing at some of the best known protocols
-            in Web3: <strong>Chainlink</strong>, <strong>Polkadot</strong>, <strong>Polygon</strong>
-            and <strong>Algorand Foundation</strong>.
-          </p>
-          <p>
-            Today I work with infrastructure and AI companies on positioning, launches and
-            technical content, from Kubernetes platforms on AWS to AI agent infrastructure.
-          </p>
-          <p>
-            I also build with AI, not just write about it. I run my own agents on
-            <strong>OpenClaw</strong> and <strong>Hermes</strong>, configure and tune them, test new models
-            as they ship, and use <strong>Claude Code</strong> every day.
-          </p>
-        </div>
-        <div class="about-numbers">
-          <div class="number-card">
-            <span class="big-num">20+</span>
-            <span class="num-label">Years of experience</span>
-          </div>
-          <div class="number-card">
-            <span class="big-num">10+</span>
-            <span class="num-label">Companies</span>
-          </div>
-          <div class="number-card">
-            <span class="big-num">3</span>
-            <span class="num-label">Worlds: infrastructure, Web3 and AI</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section aria-labelledby="selected">
+      <h2 id="selected">Selected work</h2>
+      <ul class="items">
+        <li>
+          <a class="item-title" href="https://www.moltbook.com/u/alfredotter">Alfred, an agent with its own Moltbook account</a>
+          <p class="item-meta"><time datetime="2026-04">Apr</time> to <time datetime="2026-10">Oct 2026</time> · Moltbook</p>
+          <p class="item-line">An OpenClaw agent I set up to post on Moltbook, the social network for AI agents. It wrote 458 posts and 1,322 comments in five months.</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://stellar-split-site.vercel.app">Stellar Split, built at HackMeridian Lisbon</a>
+          <p class="item-meta"><time datetime="2026-10-26">26 Oct 2026</time> · hackathon project</p>
+          <p class="item-line">An app that splits shared expenses and settles them in USDC on Stellar. Built in two days by a team of five, where I worked on product, go-to-market and security.</p>
+          <p class="item-also">Also on <a href="https://github.com/vestival/Stellar-Split">GitHub</a> and <a href="https://www.linkedin.com/posts/vestival_i-gave-an-ai-agent-its-own-wallet-at-a-hackathon-share-7524889472908521472-RIm_">LinkedIn</a></p>
+        </li>
+        <li>
+          <a class="item-title" href="https://dzone.com/articles/measured-outcomes-manually-scaling-fleet-prod">Three measured outcomes of manually scaling Fleet in prod</a>
+          <p class="item-meta"><time datetime="2026-11-09">9 Nov 2026</time> · DZone</p>
+          <p class="item-line">Someone runs kubectl scale on a cluster that Fleet manages. I ran the three ways it can go in my lab and measured each one.</p>
+          <p class="item-also">Also on <a href="https://dev.to/vestival/scaling-prod-by-hand-during-an-incident-when-fleet-manages-it-three-ways-it-goes-measured-3chb">dev.to</a> and <a href="https://builder.aws.com/content/3KgVDnGVFc9jAk2nJeUeIPwTogT/scaling-prod-by-hand-during-an-incident-when-fleet-manages-it-three-ways-it-goes-measured">AWS Builder Center</a></p>
+        </li>
+        <li>
+          <a class="item-title" href="https://devm.io/devops/gitops-scale-kubernetes">GitOps at Scale: patterns that survive 50 clusters</a>
+          <p class="item-meta"><time datetime="2026-10">Oct 2026</time> · devm.io · part 1 of 5</p>
+          <p class="item-line">Repository layout, rendering depth, promotion and drift policy decide whether a growing fleet stays operable. All four are cheapest to settle while you still have two clusters.</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://www.suse.com/blog/managing-multiple-eks-clusters-why-cluster-3-is-the-wall/">Managing multiple EKS clusters: why cluster #3 is the wall</a>
+          <p class="item-meta"><time datetime="2026-09-25">25 Sep 2026</time> · suse.com</p>
+          <p class="item-line">Count the people who need access, multiply by your clusters, then add one cluster. The jump is why the third one feels different.</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://www.linkedin.com/posts/vestival_i-keep-a-list-of-20-words-i-wont-publish-share-7518634978814046208-b30N">I keep a list of 20 words I won't publish</a>
+          <p class="item-meta"><time datetime="2026-10-21">21 Oct 2026</time> · LinkedIn</p>
+          <p class="item-line">The words I cut from every draft, mine and my agents', before anything goes out.</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://github.com/vestival/stellar-workshop-spain">Deploy on Stellar workshops, Barcelona and Madrid</a>
+          <p class="item-meta"><time datetime="2026-09-18">18</time> and <time datetime="2026-09-19">19 Sep 2026</time> · workshops</p>
+          <p class="item-line">Hands-on sessions built around Claude Code and Stellar agent skills. The repo holds the material.</p>
+        </li>
+      </ul>
+      <p class="work"><a href="/portfolio">Everything else, by topic</a></p>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <p class="section-label">Where I've worked</p>
-      <h2 class="section-heading">Experience</h2>
+    <section aria-labelledby="latest">
+      <h2 id="latest">Latest writing</h2>
+      <ul class="items compact">
+        <li>
+          <a class="item-title" href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45">After 15 years of VS Code, I gave my backlog to parallel agents in Orca</a>
+          <p class="item-meta"><time datetime="2026-11-12">12 Nov 2026</time> · dev.to</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://dev.to/vestival/disabling-a-user-in-rancher-leaves-every-binding-in-place-remove-the-membership-if-you-mean-12c4">Disabling a user in Rancher leaves every binding in place. Remove the membership if you mean it</a>
+          <p class="item-meta"><time datetime="2026-11-12">12 Nov 2026</time> · dev.to</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk">I ran two skill scanners on my own agent skills. One said do not install.</a>
+          <p class="item-meta"><time datetime="2026-11-11">11 Nov 2026</time> · dev.to</p>
+        </li>
+        <li>
+          <a class="item-title" href="https://dev.to/vestival/back-up-rancher-before-you-upgrade-three-ways-the-backup-step-failed-in-my-2152-lab-5hih">Back up Rancher before you upgrade: three ways the backup step failed in my 2.15.2 lab</a>
+          <p class="item-meta"><time datetime="2026-11-05">5 Nov 2026</time> · dev.to</p>
+        </li>
+      </ul>
+      <p class="work"><a href="/writing/">All writing</a> · <a href="/feed.xml">RSS</a></p>
+    </section>
 
-      <div class="exp-grid">
+    <section aria-labelledby="elsewhere">
+      <h2 id="elsewhere">Elsewhere</h2>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/vestival">LinkedIn</a></li>
+        <li><a href="https://github.com/vestival">GitHub</a></li>
+        <li><a href="https://x.com/victorestival">X</a></li>
+        <li><a href="https://dev.to/vestival">dev.to</a></li>
+        <li><a href="https://dzone.com/users/3052024/vestival.html">DZone</a></li>
+      </ul>
+      <p class="work"><strong>Work with me:</strong> I'm open to talks and writing on AI agents and Kubernetes. <a href="https://www.linkedin.com/in/vestival">Message me on LinkedIn</a>.</p>
+    </section>
 
-        <!-- Fractional divider -->
-        <div class="exp-card exp-card--fractional">
-          <div class="exp-logo">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--accent)"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Technical Product Marketing Lead</h3>
-                <span class="exp-company">Independent</span>
-              </div>
-              <span class="exp-date">2021 - Present</span>
-            </div>
-            <p>I work with early-stage and growth-stage companies that need senior product marketing thinking without a full-time hire. That means helping them figure out who they're talking to, what they're really saying, and how to say it in a way that lands. Positioning, messaging, launch strategy, sales narratives. Current work spans Kubernetes platforms on AWS and AI agent infrastructure.</p>
-            <div class="pill-row">
-              <span class="pill web2">Infrastructure</span>
-              <span class="pill web3">AI</span>
-            </div>
-          </div>
-        </div>
+    <section aria-labelledby="roles">
+      <h2 id="roles">Where I've worked</h2>
+      <ul class="roles">
+        <li>SUSE, Technical Product Marketing Manager, Rancher and Kubernetes <span>2026 to now</span></li>
+        <li>Algorand Foundation, Head of Product Marketing <span>2025 to 2026</span></li>
+        <li>Polygon Labs, Head of Product Marketing <span>2024 to 2025</span></li>
+        <li>Parity Labs (Polkadot), Developer Product Marketing Manager <span>2023 to 2024</span></li>
+        <li>Chainlink Labs, Product Marketing Lead <span>2022</span></li>
+        <li>SUSE, Head of Technical Marketing <span>2021 to 2022</span></li>
+        <li>Microsoft, Developer Audience Lead <span>2020 to 2021</span></li>
+        <li>Red Hat, Principal Technical Marketing Manager <span>2015 to 2020</span></li>
+        <li>Canonical, Cloud Architect, OpenStack <span>2014 to 2015</span></li>
+        <li>Logicalis Spain, Demo Center Lead and Solutions Architect <span>2010 to 2014</span></li>
+        <li>Taught IBM's AIX, WebSphere and Tivoli <span>2005 to 2010</span></li>
+      </ul>
+    </section>
 
-        <!-- Web3 row 1 -->
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/algorand.png" alt="Algorand Foundation"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">AF</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Head of Product Marketing</h3>
-                <span class="exp-company">Algorand Foundation</span>
-              </div>
-              <span class="exp-date">Apr 2025 - Mar 2026</span>
-            </div>
-            <p>Built the product marketing function from the ground up. Grew monthly active developers from 186 to 440 and ran a hackathon program with 800+ attendees and 205+ submissions.</p>
-            <span class="pill web3">Web3</span>
-          </div>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/polygon.png" alt="Polygon Labs"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">PL</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Head of Product Marketing</h3>
-                <span class="exp-company">Polygon Labs</span>
-              </div>
-              <span class="exp-date">Jan 2024 - Mar 2025</span>
-            </div>
-            <p>Led product marketing for one of the biggest names in Web3. Worked hand in hand with DevRel to make sure developers had everything they needed to build on Polygon and actually want to do it.</p>
-            <span class="pill web3">Web3</span>
-          </div>
-        </div>
-
-        <!-- Web3 row 2 -->
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/polkadot.png" alt="Parity Labs"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">PK</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Developer Product Marketing Manager</h3>
-                <span class="exp-company">Parity Labs (Polkadot)</span>
-              </div>
-              <span class="exp-date">Apr 2023 - Jan 2024</span>
-            </div>
-            <p>Helped Polkadot tell a clearer story to developers. Ran programs and hackathons to grow the community and make the platform a place developers genuinely wanted to be part of.</p>
-            <span class="pill web3">Web3</span>
-          </div>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/chainlink.png" alt="Chainlink Labs"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">CL</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Product Marketing Lead</h3>
-                <span class="exp-company">Chainlink Labs</span>
-              </div>
-              <span class="exp-date">Mar 2022 - Dec 2022</span>
-            </div>
-            <p>Took on the full product portfolio and made each product legible to the market. From Proof of Reserve to Data Feeds, my job was to make sure people understood why Chainlink was essential infrastructure.</p>
-            <span class="pill web3">Web3</span>
-          </div>
-        </div>
-
-        <!-- Web2 row 1 -->
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/suse.png" alt="SUSE"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">SU</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Head of Technical Marketing</h3>
-                <span class="exp-company">SUSE</span>
-              </div>
-              <span class="exp-date">Apr 2021 - Mar 2022</span>
-            </div>
-            <p>Built the technical marketing team and helped position SUSE's products in a competitive open source market. Spent a lot of time translating deeply technical content into things that actually moved the needle commercially.</p>
-            <span class="pill web2">Web2</span>
-          </div>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/microsoft.png" alt="Microsoft"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">MS</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Developer Audience Lead</h3>
-                <span class="exp-company">Microsoft</span>
-              </div>
-              <span class="exp-date">Feb 2020 - Mar 2021</span>
-            </div>
-            <p>Focused entirely on the developer community at Microsoft's scale. Built programs, content, and events to help developers find their way into the Microsoft cloud ecosystem in a way that felt genuine, not corporate.</p>
-            <span class="pill web2">Web2</span>
-          </div>
-        </div>
-
-        <!-- Web2 row 2 -->
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/redhat.png" alt="Red Hat"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">RH</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Technical Marketing Manager</h3>
-                <span class="exp-company">Red Hat</span>
-              </div>
-              <span class="exp-date">Nov 2015 - Jan 2020</span>
-            </div>
-            <p>Almost five years building technical marketing for Red Hat's management products. Created content, demos, and narratives that made enterprise IT teams understand why open source was the right bet for their infrastructure.</p>
-            <span class="pill web2">Web2</span>
-          </div>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/canonical.png" alt="Canonical"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">CA</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Cloud Architect</h3>
-                <span class="exp-company">Canonical Ltd.</span>
-              </div>
-              <span class="exp-date">Aug 2014 - Dec 2015</span>
-            </div>
-            <p>Helped customers navigate the early days of OpenStack and private cloud. Spent time everywhere from pre-sales to actual implementation, which gave me a hands-on technical foundation I still rely on today.</p>
-            <span class="pill web2">Web2</span>
-          </div>
-        </div>
-
-        <!-- Logicalis card -->
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/logicalis.png" alt="Logicalis"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">LG</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Solutions Architect</h3>
-                <span class="exp-company">Logicalis Spain</span>
-              </div>
-              <span class="exp-date">Sep 2010 - Aug 2014</span>
-            </div>
-            <p>Four years supporting enterprise sales teams with demos, technical presentations, and complex solution proposals. I ran the Demo Center and grew it significantly. This is where I learned to make technology tangible for people who don't live inside it.</p>
-            <span class="pill web2">Web2</span>
-          </div>
-        </div>
-
-        <!-- IBM early career card -->
-        <div class="exp-card">
-          <div class="exp-logo">
-            <img src="logos/ibm.svg" alt="IBM"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-            <div class="logo-fb" style="display:none">IBM</div>
-          </div>
-          <div class="exp-body">
-            <div class="exp-top">
-              <div>
-                <h3>Systems and Infrastructure</h3>
-                <span class="exp-company">IBM ecosystem</span>
-              </div>
-              <span class="exp-date">2005 - 2010</span>
-            </div>
-            <p>Where it all began. Several years working with IBM infrastructure, AIX, WebSphere, Tivoli, and Power Systems. Support, consulting, and training roles across different companies. The technical foundation everything else is built on.</p>
-            <span class="pill web2">Web2</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <p class="section-label">What I do</p>
-      <h2 class="section-heading">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-block">
-          <h4>AI and Agents</h4>
-          <div class="tags">
-            <span>Claude Code (daily)</span>
-            <span>OpenClaw</span>
-            <span>Hermes Agent</span>
-            <span>Agent design and evals</span>
-            <span>MCP servers</span>
-            <span>Local LLMs (Ollama)</span>
-            <span>Claude, Gemini, OpenAI</span>
-            <span>Codex</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Product Marketing</h4>
-          <div class="tags">
-            <span>Positioning and Messaging</span>
-            <span>Go-to-Market Strategy</span>
-            <span>Product Launch</span>
-            <span>Competitive Analysis</span>
-            <span>Persona Creation</span>
-            <span>Product Pricing</span>
-            <span>Sales Enablement</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Developer Marketing</h4>
-          <div class="tags">
-            <span>Developer Advocacy</span>
-            <span>Hackathon Strategy</span>
-            <span>Technical Content</span>
-            <span>DevRel Collaboration</span>
-            <span>Developer Experience</span>
-            <span>Documentation</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Web3</h4>
-          <div class="tags">
-            <span>Blockchain Protocols</span>
-            <span>DeFi</span>
-            <span>dApps</span>
-            <span>Smart Contracts</span>
-            <span>NFTs</span>
-            <span>Web3 GTM</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Web2 and Cloud</h4>
-          <div class="tags">
-            <span>Cloud Computing</span>
-            <span>OpenStack</span>
-            <span>Enterprise Software</span>
-            <span>B2B Marketing</span>
-            <span>Account-Based Marketing</span>
-            <span>Presales</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h4>Languages</h4>
-          <div class="tags">
-            <span>Python</span>
-            <span>Ruby</span>
-            <span>TypeScript</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <p class="section-label">Say hello</p>
-      <h2 class="section-heading">Let's talk</h2>
-      <p class="contact-sub">Open to conversations about product marketing, AI, infrastructure and developer ecosystems.</p>
-      <div class="contact-cards">
-        <a href="mailto:victor.estival@gmail.com" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>victor.estival@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          <span>linkedin.com/in/vestival</span>
-        </a>
-        <a href="https://twitter.com/victorestival" target="_blank" rel="noopener" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          <span>@victorestival</span>
-        </a>
-        <a href="https://github.com/vestival" target="_blank" rel="noopener" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          <span>github.com/vestival</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer>
     <div class="container">
-      <span>&copy; 2026 Victor Estival</span>
-      <a href="https://github.com/vestival" target="_blank" rel="noopener" class="footer-github">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        github.com/vestival
-      </a>
+      <span>&copy; 2026 Victor Estival. Views are my own.</span>
+      <a href="/feed.xml">RSS</a>
     </div>
   </footer>
 
-  <script>
-    const html = document.documentElement;
-
-    // Theme
-    const toggle = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', savedTheme);
-    toggle.addEventListener('click', () => {
-      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-
-    // Font size – 100% to 300% in 25% steps
-    const ZOOM_LEVELS = [1, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0];
-    let zoomIndex = parseInt(localStorage.getItem('font-level') || '0', 10);
-    const fontDown = document.getElementById('fontDown');
-    const fontUp   = document.getElementById('fontUp');
-    function applyZoom() {
-      document.body.style.zoom = ZOOM_LEVELS[zoomIndex];
-      localStorage.setItem('font-level', zoomIndex);
-      fontDown.disabled = zoomIndex === 0;
-      fontUp.disabled   = zoomIndex === ZOOM_LEVELS.length - 1;
-    }
-    applyZoom();
-    fontDown.addEventListener('click', () => { if (zoomIndex > 0) { zoomIndex--; applyZoom(); } });
-    fontUp.addEventListener('click',   () => { if (zoomIndex < ZOOM_LEVELS.length - 1) { zoomIndex++; applyZoom(); } });
-  </script>
-
+  <script src="/site.js"></script>
 </body>
 </html>

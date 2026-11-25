@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victor Estival: infrastructure and AI, explained</title>
-  <meta name="description" content="I explain infrastructure and AI to the people who run it. Kubernetes fleets, AI agents on real work, and technical product marketing. Madrid." />
+  <title>Victor Estival: run AI like you run infrastructure</title>
+  <meta name="description" content="I run AI agents on real work and report what holds up, with numbers. Twenty years in infrastructure. Madrid." />
   <link rel="canonical" href="https://vestival.es/" />
+  <link rel="alternate" hreflang="en" href="https://vestival.es/" />
+  <link rel="alternate" hreflang="es" href="https://vestival.es/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://vestival.es/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Victor Estival" />
   <meta property="og:url" content="https://vestival.es/" />
-  <meta property="og:title" content="Victor Estival: infrastructure and AI, explained" />
-  <meta property="og:description" content="I explain infrastructure and AI to the people who run it. Kubernetes fleets, AI agents on real work, and technical product marketing." />
+  <meta property="og:title" content="Victor Estival: run AI like you run infrastructure" />
+  <meta property="og:description" content="I run AI agents on real work and report what holds up, with numbers. Twenty years in infrastructure." />
   <meta property="og:image" content="https://vestival.es/og.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@victorestival" />
   <meta name="twitter:creator" content="@victorestival" />
-  <meta name="twitter:title" content="Victor Estival: infrastructure and AI, explained" />
-  <meta name="twitter:description" content="I explain infrastructure and AI to the people who run it. Kubernetes fleets, AI agents on real work, and technical product marketing." />
+  <meta name="twitter:title" content="Victor Estival: run AI like you run infrastructure" />
+  <meta name="twitter:description" content="I run AI agents on real work and report what holds up, with numbers. Twenty years in infrastructure." />
   <meta name="twitter:image" content="https://vestival.es/og.jpg" />
   <link rel="alternate" type="application/rss+xml" title="Victor Estival, writing" href="https://vestival.es/feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,6 +36,7 @@
     <nav class="container">
       <a href="/" class="nav-logo">ve</a>
       <ul>
+        <li><a href="#ai-teams">AI for teams</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -40,6 +44,7 @@
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="/writing/">Writing</a></li>
       </ul>
+      <a class="lang-switch" href="/es/" hreflang="es" lang="es">ES</a>
       <button class="font-toggle" id="fontDown" aria-label="Decrease font size">A−</button>
       <button class="font-toggle" id="fontUp" aria-label="Increase font size">A+</button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -55,25 +60,31 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="hero-greeting">Hi there, I'm</p>
-        <h1>Victor<br><span>Estival</span></h1>
-        <p class="hero-title">Technical Product Marketing at SUSE</p>
-        <p class="hero-bio">
-          I explain infrastructure and AI to the people who run it.
-          Over twenty years in enterprise infrastructure, the last eleven in technical marketing.
-          Based in <strong>Madrid, Spain</strong>.
-        </p>
-        <div class="hero-tags">
-          <span class="pill web2">Infrastructure</span>
-          <span class="pill-sep">+</span>
-          <span class="pill web3">AI</span>
+    <div class="container">
+      <div class="hx-grid">
+        <div class="hx-main">
+          <h1 class="hx-title">Run AI like you run <span class="hx-mark">infrastructure</span>.</h1>
+          <p class="hx-sub">I run AI agents on my own work every day and report what holds up, with numbers. Memory in git, secrets in a vault, a budget for every token.</p>
+          <div class="hx-cta">
+            <a href="https://app.reclaim.ai/m/victore/flexible-quick-meeting" target="_blank" rel="noopener" class="btn-primary">Book a call</a>
+            <a href="portfolio.html" class="btn-outline">See my work</a>
+          </div>
         </div>
-        <div class="hero-cta">
-          <a href="portfolio.html" class="btn-primary">View my work</a>
-          <a href="#contact" class="btn-outline">Get in touch</a>
-        </div>
+        <aside class="hx-measure" aria-label="By the numbers">
+          <div class="hx-stat">
+            <div class="hx-number-wrap"><span class="hx-number">20+</span><svg class="hx-circle" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><path d="M150 8 C 240 6, 296 34, 292 72 C 288 114, 220 134, 140 132 C 60 130, 6 108, 8 70 C 10 34, 70 10, 168 14" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></div>
+            <p class="hx-unit">Years in enterprise infrastructure</p>
+          </div>
+          <div class="hx-ruler" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="hx-stat-row">
+            <div class="hx-stat"><span class="hx-number hx-number-sm">11</span><p class="hx-unit">Years in technical marketing</p></div>
+            <div class="hx-stat"><span class="hx-number hx-number-sm">6,300+</span><p class="hx-unit">Followers on LinkedIn</p></div>
+          </div>
+        </aside>
+      </div>
+      <div class="hx-byline">
+        <img src="victor.png" alt="Victor Estival" class="hx-avatar" width="64" height="64" />
+        <p><strong>Victor Estival</strong>, Madrid. Twenty years in infrastructure, from data centers to Kubernetes, and eleven explaining it as a technical marketer.</p>
         <div class="hero-social">
           <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -86,11 +97,44 @@
           </a>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="avatar-wrap">
-          <img src="victor.png" alt="Victor Estival illustration" />
-        </div>
+      <ol class="hx-layers">
+        <li><span class="hx-layer-k">Infrastructure</span><p>Kubernetes and cloud native platforms by day. Where AI workloads run.</p></li>
+        <li><span class="hx-layer-k">Backend</span><p>Go-to-market for an AI startup building a data-analysis agent.</p></li>
+        <li><span class="hx-layer-k">Applied</span><p>Weekly sessions setting up AI for a nine-person firm in Madrid.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- AI FOR TEAMS -->
+  <section id="ai-teams">
+    <div class="container">
+      <p class="section-label">AI for your team</p>
+      <h2 class="section-heading">Your team pays for AI.<br>I make it part of the work.</h2>
+      <p class="ai-lead">Most small teams buy Claude or ChatGPT seats, and the knowledge stays scattered across chats, Drive folders and one person's head. I sit with your team, set the tools up around how you already work, and leave a system everyone can run without me.</p>
+      <dl class="ai-list">
+        <div><dt>Shared memory</dt><dd>Your company context in plain Markdown files, in a private GitHub repository. Claude, Codex and Hermes read the same knowledge, every change is versioned, and you can switch vendors without losing it.</dd></div>
+        <div><dt>Connections done once</dt><dd>Gmail, Drive, Notion, Canva and the rest connected through Composio, with company and personal accounts kept apart and each one scoped.</dd></div>
+        <div><dt>An assistant you own</dt><dd>Hermes, self-hosted or in your cloud, with one agent per person or per client and separate permissions. Reminders and daily briefs you can inspect and move.</dd></div>
+        <div><dt>Costs under control</dt><dd>Model choice by task, one session per task, and token-saving plugins, so the monthly bill holds no surprises.</dd></div>
+        <div><dt>The rest of the stack</dt><dd>CRM, password manager, dictation and meeting notes, chosen for a team of your size.</dd></div>
+      </dl>
+      <div class="ai-case">
+        <p class="ai-case-label">Recent work</p>
+        <p>A nine-person consulting firm in Madrid, three sessions in. Their knowledge lived in Drive, Notion, an Excel dashboard and two separate Claude accounts. With the founder and her right hand, week by week:</p>
+        <ul class="ai-case-list">
+          <li>One company folder of Markdown files (about, clients, decisions, design systems, knowledge, projects), versioned in a private GitHub repo. Personal folders stay on each laptop.</li>
+          <li>Claude set up for each person: memory, chat search and their own instructions, plus when to use Cowork and when Code.</li>
+          <li>Hermes as the team assistant, with Gmail, Drive, Notion and Canva connected once through Composio.</li>
+          <li>Wispr Flow for dictation and meeting notes that Claude can search.</li>
+          <li>A password manager with shared vaults and passkeys, and HubSpot as the CRM before any enrichment tool.</li>
+          <li>Token-saving plugins and one session per task, so the bill stays predictable.</li>
+        </ul>
       </div>
+      <div class="hero-cta">
+        <a href="https://app.reclaim.ai/m/victore/flexible-quick-meeting" target="_blank" rel="noopener" class="btn-primary">Book a call</a>
+        <a href="#contact" class="btn-outline">Other ways to reach me</a>
+      </div>
+      <p class="ai-note">Sessions in Spanish or English, remote or in Madrid.</p>
     </div>
   </section>
 
@@ -122,20 +166,6 @@
             <strong>Now:</strong> Kubernetes fleets with Rancher and Fleet on Amazon EKS. Agents on real work,
             with Orca as my current test bench. Views on this site are my own.
           </p>
-        </div>
-        <div class="about-numbers">
-          <div class="number-card">
-            <span class="big-num">20+</span>
-            <span class="num-label">Years in enterprise infrastructure</span>
-          </div>
-          <div class="number-card">
-            <span class="big-num">11</span>
-            <span class="num-label">Years in technical marketing</span>
-          </div>
-          <div class="number-card">
-            <span class="big-num">6,300+</span>
-            <span class="num-label">Followers on LinkedIn</span>
-          </div>
         </div>
       </div>
     </div>
@@ -518,7 +548,7 @@
     <div class="container">
       <p class="section-label">Say hello</p>
       <h2 class="section-heading">Let's talk</h2>
-      <p class="contact-sub"><strong>Work with me:</strong> I'm open to talks and writing on AI agents and Kubernetes. <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" style="color: var(--accent);">Message me on LinkedIn</a>.</p>
+      <p class="contact-sub"><strong>Work with me:</strong> I'm open to advisory sessions on AI for small teams, and to talks and writing on AI agents and Kubernetes. <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" style="color: var(--accent);">Message me on LinkedIn</a>.</p>
       <div class="contact-cards">
         <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" class="contact-card">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>

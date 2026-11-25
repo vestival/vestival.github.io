@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Estival: trata la IA como infraestructura</title>
+  <meta name="description" content="Uso agentes de IA en trabajo real y cuento qué aguanta, con números. Veinte años en infraestructura. Madrid." />
+  <link rel="canonical" href="https://vestival.es/es/" />
+  <link rel="alternate" hreflang="en" href="https://vestival.es/es/" />
+  <link rel="alternate" hreflang="es" href="https://vestival.es/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://vestival.es/es/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Victor Estival" />
+  <meta property="og:url" content="https://vestival.es/es/" />
+  <meta property="og:title" content="Victor Estival: trata la IA como infraestructura" />
+  <meta property="og:description" content="Uso agentes de IA en trabajo real y cuento qué aguanta, con números. Veinte años en infraestructura." />
+  <meta property="og:image" content="https://vestival.es/og.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@victorestival" />
+  <meta name="twitter:creator" content="@victorestival" />
+  <meta name="twitter:title" content="Victor Estival: trata la IA como infraestructura" />
+  <meta name="twitter:description" content="Uso agentes de IA en trabajo real y cuento qué aguanta, con números. Veinte años en infraestructura." />
+  <meta name="twitter:image" content="https://vestival.es/og.jpg" />
+  <link rel="alternate" type="application/rss+xml" title="Victor Estival, writing" href="https://vestival.es/feed.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Gabarito:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="https://umami.vestival.es/script.js" data-website-id="8cd49a4f-4316-427f-9799-4610c2093880"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="container">
+      <a href="/es/" class="nav-logo">ve</a>
+      <ul>
+        <li><a href="#ai-teams">IA para equipos</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="../portfolio.html">Portfolio</a></li>
+        <li><a href="/writing/">Artículos</a></li>
+      </ul>
+      <a class="lang-switch" href="/" hreflang="en" lang="en">EN</a>
+      <button class="font-toggle" id="fontDown" aria-label="Reducir tamaño de letra">A−</button>
+      <button class="font-toggle" id="fontUp" aria-label="Aumentar tamaño de letra">A+</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="icon-sun">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="icon-moon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hx-grid">
+        <div class="hx-main">
+          <h1 class="hx-title">Trata la IA como tratas la <span class="hx-mark">infraestructura</span>.</h1>
+          <p class="hx-sub">Uso agentes de IA en mi propio trabajo cada día y cuento qué aguanta, con números. Memoria en git, secretos en un gestor de contraseñas, un presupuesto para cada token.</p>
+          <div class="hx-cta">
+            <a href="#ai-teams" class="btn-primary">Cómo monto la IA en equipos</a>
+            <a href="/writing/" class="btn-outline">Lee mis pruebas de campo</a>
+          </div>
+          <p class="hx-start">¿Empiezas con IA y no sabes por dónde? <a href="#ai-teams">Empieza aquí</a></p>
+        </div>
+        <aside class="hx-measure" aria-label="Última medición">
+          <p class="hx-measure-label">Última medición</p>
+          <div class="hx-number-wrap">
+            <span class="hx-number">&minus;20%</span>
+            <svg class="hx-circle" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><path d="M150 8 C 240 6, 296 34, 292 72 C 288 114, 220 134, 140 132 C 60 130, 6 108, 8 70 C 10 34, 70 10, 168 14" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+          </div>
+          <p class="hx-unit">CONSUMO DE TOKENS · MI CONFIGURACIÓN · NOV 2026</p>
+          <div class="hx-ruler" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="hx-caption">Dos plugins de ahorro de tokens y una sesión por tarea. El mismo trabajo con una quinta parte menos de tokens.</p>
+        </aside>
+      </div>
+      <div class="hx-byline">
+        <img src="../victor.png" alt="Victor Estival" class="hx-avatar" width="64" height="64" />
+        <p><strong>Victor Estival</strong>, Madrid. Veinte años en infraestructura, de los centros de datos a Kubernetes, y once explicándola desde el marketing técnico.</p>
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/vestival" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://x.com/victorestival" target="_blank" rel="noopener" aria-label="Twitter/X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <ol class="hx-layers">
+        <li><span class="hx-layer-k">Infraestructura</span><p>Plataformas Kubernetes y cloud native en mi día a día. Donde se ejecuta la IA.</p></li>
+        <li><span class="hx-layer-k">Backend</span><p>Go-to-market para una startup de IA que construye un agente de análisis de datos.</p></li>
+        <li><span class="hx-layer-k">Aplicada</span><p>Sesiones semanales montando IA para una empresa de nueve personas en Madrid.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- AI FOR TEAMS -->
+  <section id="ai-teams">
+    <div class="container">
+      <p class="section-label">IA para tu equipo</p>
+      <h2 class="section-heading">Tu equipo ya paga por IA.<br>Yo hago que forme parte del trabajo.</h2>
+      <p class="ai-lead">La mayoría de equipos pequeños compra licencias de Claude o ChatGPT, y el conocimiento acaba repartido entre chats, carpetas de Drive y la cabeza de una persona. Me siento con tu equipo, monto las herramientas alrededor de cómo ya trabajáis y os dejo un sistema que funciona sin mí.</p>
+      <dl class="ai-list">
+        <div><dt>Memoria compartida</dt><dd>El contexto de tu empresa en ficheros Markdown, en un repositorio privado de GitHub. Claude, Codex y Hermes leen el mismo conocimiento, cada cambio queda versionado y puedes cambiar de proveedor sin perderlo.</dd></div>
+        <div><dt>Conexiones una sola vez</dt><dd>Gmail, Drive, Notion, Canva y el resto conectados con Composio, con las cuentas de empresa y las personales separadas y cada una con su alcance.</dd></div>
+        <div><dt>Un asistente que es tuyo</dt><dd>Hermes, en tu servidor o en tu nube, con un agente por persona o por cliente y permisos separados. Recordatorios y resúmenes diarios que puedes revisar y llevarte.</dd></div>
+        <div><dt>Costes bajo control</dt><dd>El modelo adecuado para cada tarea, una sesión por tarea y plugins de ahorro de tokens. La misma configuración redujo mi consumo de tokens en torno a un 20 %.</dd></div>
+        <div><dt>El resto de herramientas</dt><dd>CRM, gestor de contraseñas, dictado y notas de reuniones, elegidos para un equipo de tu tamaño.</dd></div>
+      </dl>
+      <div class="ai-case">
+        <p class="ai-case-label">Trabajo reciente</p>
+        <p>Una consultora de nueve personas en Madrid, tras tres sesiones. Su conocimiento estaba en Drive, Notion, un Excel de control y dos cuentas de Claude separadas. Con la fundadora y su mano derecha, semana a semana:</p>
+        <ul class="ai-case-list">
+          <li>Una carpeta de empresa con ficheros Markdown (quiénes somos, clientes, decisiones, design systems, conocimiento, proyectos), versionada en un repositorio privado de GitHub. Las carpetas personales se quedan en cada portátil.</li>
+          <li>Claude configurado para cada persona: memoria, búsqueda de chats e instrucciones propias, y cuándo usar Cowork y cuándo Code.</li>
+          <li>Hermes como asistente del equipo, con Gmail, Drive, Notion y Canva conectados una sola vez con Composio.</li>
+          <li>Wispr Flow para dictar y para notas de reuniones que Claude puede buscar.</li>
+          <li>Un gestor de contraseñas con bóvedas compartidas y passkeys, y HubSpot como CRM antes de cualquier herramienta de enriquecimiento.</li>
+          <li>Plugins de ahorro de tokens y una sesión por tarea, para que la factura sea predecible.</li>
+        </ul>
+      </div>
+      <div class="hero-cta">
+        <a href="https://app.reclaim.ai/m/victore/flexible-quick-meeting" target="_blank" rel="noopener" class="btn-primary">Reserva una llamada</a>
+        <a href="#contact" class="btn-outline">Otras formas de contactar</a>
+      </div>
+      <p class="ai-note">Sesiones en español o en inglés, en remoto o en Madrid.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Sobre mí</p>
+      <div class="about-grid">
+        <div class="about-main">
+          <h2>Lo pruebo en mi laboratorio<br>antes de escribir sobre ello.</h2>
+          <p>
+            Soy technical product marketing manager en <strong>SUSE</strong>, donde trabajo en
+            <strong>Rancher</strong> y Kubernetes. Trabajo con equipos de plataforma que gestionan flotas de Kubernetes y pruebo en mi laboratorio lo que preguntan antes de escribir sobre ello.
+          </p>
+          <p>
+            También uso agentes de IA en mi propio backlog y cuento lo que falla, con números. Ahora mismo, con <strong>Orca</strong>, con agentes en paralelo resolviendo el backlog de mi app de finanzas personales, cada uno en su propio git worktree.
+          </p>
+          <p>
+            Antes del marketing fui arquitecto de soluciones en <strong>Logicalis</strong> y arquitecto cloud de OpenStack en <strong>Canonical</strong>. Pasé al marketing técnico en <strong>Red Hat</strong>,
+            <strong>Microsoft</strong> y <strong>SUSE</strong>, y de 2022 a principios de 2026 dirigí el marketing de producto en <strong>Chainlink</strong>, <strong>Polkadot</strong>, <strong>Polygon</strong> y
+            <strong>Algorand Foundation</strong>.
+          </p>
+          <p>
+            <strong>Ahora:</strong> Flotas de Kubernetes con Rancher y Fleet en Amazon EKS. Agentes en trabajo real, con Orca como banco de pruebas. Las opiniones de esta web son mías.
+          </p>
+        </div>
+        <div class="about-numbers">
+          <div class="number-card">
+            <span class="big-num">20+</span>
+            <span class="num-label">Años en infraestructura empresarial</span>
+          </div>
+          <div class="number-card">
+            <span class="big-num">11</span>
+            <span class="num-label">Años en marketing técnico</span>
+          </div>
+          <div class="number-card">
+            <span class="big-num">6,300+</span>
+            <span class="num-label">Seguidores en LinkedIn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST WORK -->
+  <section id="latest" style="border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <p class="section-label">Trabajo reciente</p>
+      <h2 class="section-heading">Últimos artículos y proyectos</h2>
+      <ul class="article-list">
+        <li class="article-item">
+          <a href="https://dev.to/vestival/after-15-years-of-vs-code-i-gave-my-backlog-to-parallel-agents-in-orca-2e45" target="_blank" rel="noopener">
+            After 15 years of VS Code, I gave my backlog to parallel agents in Orca
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://dev.to/vestival/disabling-a-user-in-rancher-leaves-every-binding-in-place-remove-the-membership-if-you-mean-12c4" target="_blank" rel="noopener">
+            Disabling a user in Rancher leaves every binding in place
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://dev.to/vestival/i-ran-two-skill-scanners-on-my-own-agent-skills-one-said-do-not-install-59hk" target="_blank" rel="noopener">
+            I ran two skill scanners on my own agent skills. One said do not install.
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://dzone.com/articles/measured-outcomes-manually-scaling-fleet-prod" target="_blank" rel="noopener">
+            Three measured outcomes of manually scaling Fleet in prod (DZone)
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://dev.to/vestival/back-up-rancher-before-you-upgrade-three-ways-the-backup-step-failed-in-my-2152-lab-5hih" target="_blank" rel="noopener">
+            Back up Rancher before you upgrade: three ways the backup step failed in my lab
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://devm.io/devops/gitops-scale-kubernetes" target="_blank" rel="noopener">
+            GitOps at Scale: patterns that survive 50 clusters (devm.io)
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://stellar-split-site.vercel.app" target="_blank" rel="noopener">
+            Stellar Split, built in two days at HackMeridian Lisbon
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+        <li class="article-item">
+          <a href="https://github.com/vestival/stellar-workshop-spain" target="_blank" rel="noopener">
+            Deploy on Stellar workshops, Barcelona and Madrid
+            <span class="article-arrow">↗</span>
+          </a>
+        </li>
+      </ul>
+      <div class="hero-cta" style="margin: 32px 0 0;">
+        <a href="../portfolio.html" class="btn-primary">Todo mi trabajo</a>
+        <a href="/writing/" class="btn-outline">Artículos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label">Dónde he trabajado</p>
+      <h2 class="section-heading">Experiencia</h2>
+
+      <div class="exp-grid">
+
+        <!-- Current role -->
+        <div class="exp-card exp-card--fractional">
+          <div class="exp-logo">
+            <img src="../logos/suse.png" alt="SUSE"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">SU</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Technical Product Marketing Manager</h3>
+                <span class="exp-company">SUSE</span>
+              </div>
+              <span class="exp-date">2026 - Actualidad</span>
+            </div>
+            <p>Marketing de producto para Rancher y Kubernetes, incluido SUSE Rancher for AWS. Escribo notas de campo desde mi laboratorio en EKS y trabajo con equipos de plataforma que gestionan flotas de Kubernetes.</p>
+            <div class="pill-row">
+              <span class="pill web2">Kubernetes</span>
+              <span class="pill web2">Infraestructura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web3 row 1 -->
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/algorand.png" alt="Algorand Foundation"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">AF</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Head of Product Marketing</h3>
+                <span class="exp-company">Algorand Foundation</span>
+              </div>
+              <span class="exp-date">abr 2025 - mar 2026</span>
+            </div>
+            <p>Monté el área de marketing de producto desde cero. Pasamos de 186 a 440 desarrolladores activos al mes y organicé un programa de hackathons con más de 800 asistentes y más de 205 proyectos.</p>
+            <span class="pill web3">Web3</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/polygon.png" alt="Polygon Labs"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">PL</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Head of Product Marketing</h3>
+                <span class="exp-company">Polygon Labs</span>
+              </div>
+              <span class="exp-date">ene 2024 - mar 2025</span>
+            </div>
+            <p>Dirigí el marketing de producto de zkEVM y CDK. Trabajé codo con codo con DevRel para que los desarrolladores tuvieran todo lo necesario para construir en Polygon y quisieran hacerlo.</p>
+            <span class="pill web3">Web3</span>
+          </div>
+        </div>
+
+        <!-- Web3 row 2 -->
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/polkadot.png" alt="Parity Labs"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">PK</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Developer Product Marketing Manager</h3>
+                <span class="exp-company">Parity Labs (Polkadot)</span>
+              </div>
+              <span class="exp-date">abr 2023 - ene 2024</span>
+            </div>
+            <p>Ayudé a Polkadot a contar una historia más clara a los desarrolladores. Llevé programas y hackathons para hacer crecer la comunidad y que los desarrolladores quisieran formar parte de la plataforma.</p>
+            <span class="pill web3">Web3</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/chainlink.png" alt="Chainlink Labs"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">CL</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Product Marketing Lead</h3>
+                <span class="exp-company">Chainlink Labs</span>
+              </div>
+              <span class="exp-date">mar 2022 - dic 2022</span>
+            </div>
+            <p>Me hice cargo de todo el portfolio de producto e hice que el mercado entendiera cada producto, entre ellos Proof of Reserve y Data Feeds. Mi trabajo era que se entendiera por qué Chainlink era infraestructura esencial.</p>
+            <span class="pill web3">Web3</span>
+          </div>
+        </div>
+
+        <!-- Web2 row 1 -->
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/suse.png" alt="SUSE"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">SU</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Head of Technical Marketing</h3>
+                <span class="exp-company">SUSE</span>
+              </div>
+              <span class="exp-date">abr 2021 - mar 2022</span>
+            </div>
+            <p>Monté un equipo de marketing técnico de cuatro personas para Rancher, NeuVector y SUSE Linux Enterprise, y convertí material muy técnico en contenido que los equipos de ventas podían usar.</p>
+            <span class="pill web2">Web2</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/microsoft.png" alt="Microsoft"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">MS</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Developer Audience Lead</h3>
+                <span class="exp-company">Microsoft</span>
+              </div>
+              <span class="exp-date">feb 2020 - mar 2021</span>
+            </div>
+            <p>Centrado por completo en la comunidad de desarrolladores, a la escala de Microsoft. Coordiné a diez profesionales de developer relations y creé programas, contenido y eventos para acercar a los desarrolladores a la nube de Microsoft.</p>
+            <span class="pill web2">Web2</span>
+          </div>
+        </div>
+
+        <!-- Web2 row 2 -->
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/redhat.png" alt="Red Hat"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">RH</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Principal Technical Marketing Manager</h3>
+                <span class="exp-company">Red Hat</span>
+              </div>
+              <span class="exp-date">nov 2015 - ene 2020</span>
+            </div>
+            <p>Casi cinco años construyendo el marketing técnico de los productos de gestión de Red Hat: CloudForms, Satellite y Ansible. Creé contenido, demos y relatos para que los equipos de TI entendieran por qué el open source era la apuesta correcta para su infraestructura.</p>
+            <span class="pill web2">Web2</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/canonical.png" alt="Canonical"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">CA</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Cloud Architect</h3>
+                <span class="exp-company">Canonical Ltd.</span>
+              </div>
+              <span class="exp-date">ago 2014 - dic 2015</span>
+            </div>
+            <p>Acompañé a clientes en los primeros días de OpenStack y la nube privada. Estuve en todo, desde la preventa hasta la implantación, y eso me dio una base técnica en la que sigo apoyándome.</p>
+            <span class="pill web2">Web2</span>
+          </div>
+        </div>
+
+        <!-- Logicalis card -->
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/logicalis.png" alt="Logicalis"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">LG</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Solutions Architect</h3>
+                <span class="exp-company">Logicalis Spain</span>
+              </div>
+              <span class="exp-date">sep 2010 - ago 2014</span>
+            </div>
+            <p>Cuatro años apoyando a equipos de ventas con demos, presentaciones técnicas y propuestas de solución complejas. Llevé el Demo Center y amplié su catálogo de 6 a 28 productos. Aquí aprendí a hacer tangible la tecnología para quien no vive dentro de ella.</p>
+            <span class="pill web2">Web2</span>
+          </div>
+        </div>
+
+        <!-- IBM early career card -->
+        <div class="exp-card">
+          <div class="exp-logo">
+            <img src="../logos/ibm.svg" alt="IBM"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
+            <div class="logo-fb" style="display:none">IBM</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-top">
+              <div>
+                <h3>Sistemas e infraestructura</h3>
+                <span class="exp-company">Ecosistema IBM</span>
+              </div>
+              <span class="exp-date">2005 - 2010</span>
+            </div>
+            <p>Donde empezó todo. Di formación y soporte de AIX, WebSphere, Tivoli y Power Systems de IBM, en puestos de soporte, consultoría y formación en distintas empresas. La base técnica sobre la que se construye todo lo demás.</p>
+            <span class="pill web2">Web2</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Lo que hago</p>
+      <h2 class="section-heading">Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h4>IA y agentes</h4>
+          <div class="tags">
+            <span>Claude Code (a diario)</span>
+            <span>Orca (agentes en paralelo)</span>
+            <span>OpenClaw</span>
+            <span>Hermes Agent</span>
+            <span>MCP servers</span>
+            <span>Skills de agentes y escáneres de skills</span>
+            <span>LLM locales (Ollama)</span>
+            <span>Claude, Gemini, OpenAI</span>
+            <span>Codex</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h4>Kubernetes y cloud</h4>
+          <div class="tags">
+            <span>Kubernetes</span>
+            <span>Rancher</span>
+            <span>Fleet y GitOps</span>
+            <span>Amazon EKS</span>
+            <span>OpenStack</span>
+            <span>Ansible</span>
+            <span>Preventa</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h4>Marketing de producto</h4>
+          <div class="tags">
+            <span>Posicionamiento y mensajes</span>
+            <span>Estrategia go-to-market</span>
+            <span>Lanzamiento de producto</span>
+            <span>Análisis competitivo</span>
+            <span>Creación de buyer personas</span>
+            <span>Precios de producto</span>
+            <span>Relatos de venta</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h4>Marketing para desarrolladores</h4>
+          <div class="tags">
+            <span>Developer advocacy</span>
+            <span>Estrategia de hackathons</span>
+            <span>Contenido técnico</span>
+            <span>Colaboración con DevRel</span>
+            <span>Experiencia de desarrollador</span>
+            <span>Documentación</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h4>Web3</h4>
+          <div class="tags">
+            <span>Protocolos blockchain</span>
+            <span>DeFi</span>
+            <span>dApps</span>
+            <span>Smart Contracts</span>
+            <span>Pagos entre agentes (x402)</span>
+            <span>Web3 GTM</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h4>Lenguajes</h4>
+          <div class="tags">
+            <span>Python</span>
+            <span>Ruby</span>
+            <span>TypeScript</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Saluda</p>
+      <h2 class="section-heading">Hablemos</h2>
+      <p class="contact-sub"><strong>Trabaja conmigo:</strong> Hago sesiones de asesoramiento sobre IA para equipos pequeños, y charlas y artículos sobre agentes de IA y Kubernetes. <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" style="color: var(--accent);">Escríbeme por LinkedIn</a>.</p>
+      <div class="contact-cards">
+        <a href="https://www.linkedin.com/in/vestival" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>linkedin.com/in/vestival</span>
+        </a>
+        <a href="https://x.com/victorestival" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>@victorestival</span>
+        </a>
+        <a href="https://github.com/vestival" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span>github.com/vestival</span>
+        </a>
+        <a href="https://dev.to/vestival" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          <span>dev.to/vestival</span>
+        </a>
+        <a href="https://dzone.com/users/3052024/vestival.html" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          <span>DZone</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>&copy; 2026 Victor Estival</span>
+      <a href="https://github.com/vestival" target="_blank" rel="noopener" class="footer-github">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        github.com/vestival
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    // Theme
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // Font size – 100% to 300% in 25% steps
+    const ZOOM_LEVELS = [1, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0];
+    let zoomIndex = parseInt(localStorage.getItem('font-level') || '0', 10);
+    const fontDown = document.getElementById('fontDown');
+    const fontUp   = document.getElementById('fontUp');
+    function applyZoom() {
+      document.body.style.zoom = ZOOM_LEVELS[zoomIndex];
+      localStorage.setItem('font-level', zoomIndex);
+      fontDown.disabled = zoomIndex === 0;
+      fontUp.disabled   = zoomIndex === ZOOM_LEVELS.length - 1;
+    }
+    applyZoom();
+    fontDown.addEventListener('click', () => { if (zoomIndex > 0) { zoomIndex--; applyZoom(); } });
+    fontUp.addEventListener('click',   () => { if (zoomIndex < ZOOM_LEVELS.length - 1) { zoomIndex++; applyZoom(); } });
+  </script>
+
+</body>
+</html>

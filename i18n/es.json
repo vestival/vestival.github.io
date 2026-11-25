@@ -33,7 +33,6 @@
 "An assistant you own": "Un asistente que es tuyo",
 "Hermes, self-hosted or in your cloud, with one agent per person or per client and separate permissions. Reminders and daily briefs you can inspect and move.": "Hermes, en tu servidor o en tu nube, con un agente por persona o por cliente y permisos separados. Recordatorios y resúmenes diarios que puedes revisar y llevarte.",
 "Costs under control": "Costes bajo control",
-"Model choice by task, one session per task, and token-saving plugins. The same setup cut my own token use by about 20%.": "El modelo adecuado para cada tarea, una sesión por tarea y plugins de ahorro de tokens. La misma configuración redujo mi consumo de tokens en torno a un 20 %.",
 "The rest of the stack": "El resto de herramientas",
 "CRM, password manager, dictation and meeting notes, chosen for a team of your size.": "CRM, gestor de contraseñas, dictado y notas de reuniones, elegidos para un equipo de tu tamaño.",
 "Recent work": "Trabajo reciente",
@@ -129,5 +128,7 @@
 "Increase font size": "Aumentar tamaño de letra",
 "Toggle theme": "Cambiar tema",
 "By the numbers": "En cifras",
-"6,300+": "6.300+"
+"6,300+": "6.300+",
+"Model choice by task, one session per task, and token-saving plugins, so the monthly bill holds no surprises.": "El modelo adecuado para cada tarea, una sesión por tarea y plugins de ahorro de tokens, para que la factura del mes no dé sorpresas.",
+"See my work": "Mira mi trabajo"
 }
